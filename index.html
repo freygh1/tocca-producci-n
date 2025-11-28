@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tocca Amalfi Coast Tour</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;700&family=Playfair+Display:wght@400;700&family=Style+Script&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+</head>
+
+<body>
+
+    <div id="contact-menu" class="contact-menu">
+        <button class="contact-toggle" onclick="toggleContactMenu()">
+            <i class="fas fa-envelope"></i>
+            <span class="contact-text">Contact Us</span>
+        </button>
+        <div class="contact-options">
+            <a href="mailto:info@toccaamalfi.com?subject=More%20information%20-%20Tocca" class="contact-option"
+                title="Email Us">
+                <i class="fas fa-envelope"></i>
+                <span>Email</span>
+            </a>
+            <a href="https://wa.me/16462298158?text=Hello!%20I'd%like%20to%20know%20more%20about%20the%20tours."
+                target="_blank" class="contact-option" title="WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+                <span>WhatsApp</span>
+            </a>
+            <a href="tel:+16462298158" class="contact-option" title="Call Us">
+                <i class="fas fa-phone"></i>
+                <span>Call</span>
+            </a>
+        </div>
+    </div>
+
+    <header class="main-header">
+        <nav class="navbar">
+            <a href="#hero" class="nav-logo-container">
+                <img src="imagenes/tocca_amalfi_nav.png" alt="Tocca Amalfi Logo" class="nav-logo">
+            </a>
+            <div class="nav-menu">
+                <a href="#why-tocca-amalfi" class="nav-link">Why Choose Us?</a>
+                <a href="#what-we-offer" class="nav-link">What We Offer</a>
+                <a href="#our-experiences" class="nav-link">Our Experiences</a>
+                <a href="faq.html" class="nav-link">FAQ</a>
+                <a href="#" class="nav-link" onclick="openRequestModal(); return false;">Contact Us</a>
+            </div>
+            <button class="hamburger" aria-label="Open menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </nav>
+    </header>
+
+    <header id="hero" class="hero-section">
+        <img class="hero-img" src="imagenes/newbackgrounglemon.jpg" alt="Tocca Amalfi Background">
+        <div class="hero-content">
+            <h1 class="hero-main-title">Tocca</h1>
+            <h2 class="hero-subtitle">Amalfi Coast</h2>
+            <h3 class="hero-description">Touch the soul of the coast.</h3>
+            <p class="slogan">A curated, founder-hosted, high-touch travel experience for travelers who seek
+                authenticity, connection, and effortless luxury.</p>
+            <div class="hero-journey-links">
+                <a href="the_signature_journey.html" class="hero-journey-link">Discover the Signature Journey →</a>
+                <a href="the_bespoke_journey.html" class="hero-journey-link">Explore the Bespoke Journey →</a>
+            </div>
+            <div class="hero-cta-buttons">
+                <a href="#" class="cta-button" onclick="openRequestModal(); return false;">Interest? Let's connect →</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="why-tocca-amalfi" class="why-us-carousel-section animate-on-scroll">
+            <h2>Why Choose Us?</h2>
+            <div class="why-us-container">
+                <div class="why-us-text-block">
+                    <p class="text-why-us"><strong>Tocca Amalfi Coast is more than a travel experience - it's a feeling.
+                            A rhythm that stays
+                            with you: in your skin, your memory and your soul.</strong></p>
+
+                    <p class="text-why-us">Each journey unfolds with <strong>ease and intention, blending local
+                            authenticity, quiet beauty,
+                            and seamless care from the first contact to beyond farewell.</strong></p>
+
+                    <p class="text-why-us">Born from my lifelong love for exploration and shaped by years living across
+                        seven countries and
+                        five continents - including more than two decades in the U.S. leading global teams and
+                        transformations in the travel industry - <strong>Tocca Amalfi Coast is the most personal chapter
+                            of my journey.</strong></p>
+
+                    <p class="text-why-us">It was here, on the Amalfi Coast, that I discovered what I never expected:
+                        love, family, home,
+                        and a true sense of belonging. Now, as a <strong>local by heart</strong> and by choice, I
+                        created Tocca Amalfi Coast to share the coast as I live it - through its people, its stories,
+                        and its quiet, timeless beauty.</p>
+
+                    <p class="text-why-us">I invite you to experience the Amalfi coast not as a visitor, but as part of
+                        its soul to touch,
+                        taste, and truly feel the Coast.</p>
+
+                    <p class="text-why-us"><strong>Benvenuti a casa. Welcome home. Bienvenido a casa</strong><br>
+                        Jessica Pena, Founder & Host</p>
+                </div>
+                <div class="why-us-image-grid">
+                    <img src="imagenes/toccaowner.jpg"
+                        alt="A smiling woman stands on a sunlit terrace overlooking the Amalfi Coast, with colorful houses and the blue sea in the background. The scene feels warm and welcoming, capturing a sense of joy and belonging.">
+                </div>
+            </div>
+        </section>
+
+        <section id="what-we-offer" class="why-us-carousel-section animate-on-scroll">
+            <h2>What We Offer</h2>
+            <div class="why-us-container">
+
+                <div class="why-us-text-block">
+                    <p><strong>We offer curated moments that invite you to live the Amalfi Coast - effortlessly,
+                            authentically, and with soul</strong></p>
+
+                    <p>Your journey flows through the soul of the Amalfi Coast — from Maiori and Minori to Amalfi,
+                        Positano, and beyond — with special visits to Capri, Pompeii, and hidden coastal gems along the
+                        way.</p>
+
+                    <p><strong>From the first hello to beyond farewell, every detail is arranged with intention</strong>
+                        - creating a seamless and joyful experience that lets you simply arrive and live <em>la dolce
+                            vita.</em></p>
+
+                    <p>As <strong>your personal host, I'll welcome you upon arrival and accompany you along the
+                            way</strong> - ensuring everything flows naturally, with the perfect balance of support and
+                        freedom.</p>
+
+                    <div class="what-we-offer-cta">
+                        <a href="#" class="cta-button" onclick="openRequestModal(); return false;">Interest? Let's
+                            connect →</a>
+                    </div>
+                </div>
+
+                <div class="why-us-image-grid what-we-offer-grid-photos">
+                    <img src="imagenes/lemons.jpg" alt="Lemon trees and limoncello">
+                    <img src="imagenes/gapes.jpg" alt="Fresh local grapes and wine">
+                    <img src="imagenes/boat.jpg" alt="Sailing through golden sunsets">
+                    <img src="imagenes/views.jpg" alt="Breathtaking Amalfi Coast views">
+                </div>
+
+            </div>
+
+            <h2 class="glimpse-title">A glimpse of some of the curated experiences that awaits for you</h2>
+
+            <div class="glimpse-section-wrapper">
+                <div class="what-we-offer-list">
+                    <ul class="offer-list offer-list-compact">
+                        <li>🏡 Terraces overlooking the Sea.</li>
+                        <li>🍝 Cooking with Nonna.</li>
+                        <li>🌾 Farm-to-Table Dining.</li>
+                        <li>🍇 Vineyard Tastings.</li>
+                        <li>♨ Thermal Baths & Spa Retreats.</li>
+                        <li>⛵ Private Boat Sailing.</li>
+                        <li>🛵 Vespa Rides & Private Drivers.</li>
+                        <li>🍋 Lemon Grove Walks</li>
+                        <li>🧘 Wellness Offerings.</li>
+                        <li>🎾 For the Active Traveler.</li>
+                        <li>🔥 Culinary Traditions.</li>
+                    </ul>
+                </div>
+
+                <div class="experiences-carousel what-we-offer-carousel">
+                    <div><img src="imagenes/1.jpg" alt="Amalfi Coast experience 1"></div>
+                    <div><img src="imagenes/2.jpg" alt="Amalfi Coast experience 2"></div>
+                    <div><img src="imagenes/3.jpg" alt="Amalfi Coast experience 3"></div>
+                    <div><img src="imagenes/4.jpg" alt="Amalfi Coast experience 4"></div>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="our-experiences" class="journey-section animate-on-scroll">
+            <h2>Two Distinctive Journeys to Experience the Amalfi Coast</h2>
+            <p class="journey-intro">Whether you seek an <strong>immersive journey or experiences tailored to your time
+                    and interests</strong>. Each one is handcrafted with intention, guided by our philosophy of slow,
+                soulful travel - inviting you to connect with the coast through authenticity, beauty, and heart.</p>
+
+            <div class="journey-container">
+                <!-- Signature Journey Card -->
+                <a href="the_signature_journey.html" class="journey-card signature-card">
+                    <img src="imagenes/signature journey.jpg" alt="Signature Journey - Amalfi Coast"
+                        class="journey-card-image">
+                    <div class="journey-card-content">
+                        <h3>Signature Journey</h3>
+                        <p class="journey-subtitle-card">For those who want to simply arrive and be embraced by the
+                            Coast.</p>
+
+                        <ul class="journey-features">
+                            <li><i class="fas fa-sun"></i> 10 days of curated experiences</li>
+                            <li><i class="fas fa-hotel"></i> Handpicked stays & local hosts</li>
+                            <li><i class="fas fa-car"></i> Seamless logistics and transfers</li>
+                            <li><i class="fas fa-users"></i> Small groups, big memories</li>
+                            <li><i class="fas fa-cocktail"></i> Daily touches of <em>la dolce vita</em></li>
+                        </ul>
+
+                        <span class="journey-link">DISCOVER THE JOURNEY →</span>
+                    </div>
+                </a>
+
+                <!-- Bespoke Journey Card -->
+                <a href="the_bespoke_journey.html" class="journey-card bespoke-card">
+                    <img src="imagenes/views.jpg" alt="Bespoke Journey - Amalfi Coast" class="journey-card-image">
+                    <div class="journey-card-content">
+                        <h3>Bespoke Journey</h3>
+                        <p class="journey-subtitle-card">For the dreamers who wish to craft their own Italian story</p>
+
+                        <ul class="journey-features">
+                            <li><i class="fas fa-magic"></i> Fully personalized itinerary</li>
+                            <li><i class="fas fa-paint-brush"></i> Access to local artisans & experiences</li>
+                            <li><i class="fas fa-user-tie"></i> Private guides and chefs</li>
+                            <li><i class="fas fa-calendar-check"></i> Flexible dates & tailor-made moments</li>
+                            <li><i class="fas fa-heart"></i> Designed with you, for you</li>
+                        </ul>
+
+                        <span class="journey-link">DISCOVER THE JOURNEY →</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="journey-promise">
+                <h4>2 JOURNEYS / ONE PROMISE</h4>
+                <p>To touch the soul of the Coast.</p>
+            </div>
+        </section>
+
+        <section id="whats-included-overview" class="why-us-carousel-section animate-on-scroll">
+            <!-- What's Included Section with 2x5 Grid -->
+            <div class="why-us-container">
+                <div class="why-us-text-block">
+
+                    <!-- What's Included Section with 2x5 Grid -->
+                    <div class="inclusions-full-section">
+                        <h3 class="whats-included-main-title">What's Included</h3>
+
+                        <div class="inclusions-grid-4x3">
+                            <div class="inclusion-item">
+                                <i class="fas fa-car"></i>
+                                <p>Private luxury transportation</p>
+                            </div>
+                            <div class="inclusion-item">
+                                <i class="fas fa-ship"></i>
+                                <p>Private boat excursions</p>
+                            </div>
+                            <div class="inclusion-item">
+                                <i class="fas fa-utensils"></i>
+                                <p>All meals included with wine</p>
+                            </div>
+                            <div class="inclusion-item">
+                                <i class="fas fa-hotel"></i>
+                                <p>Luxury accommodations</p>
+                            </div>
+                            <div class="inclusion-item">
+                                <i class="fas fa-compass"></i>
+                                <p>Curated experiences</p>
+                            </div>
+                            <div class="inclusion-item">
+                                <i class="fas fa-concierge-bell"></i>
+                                <p>24/7 personal concierge</p>
+                            </div>
+                            <div class="inclusion-item">
+                                <i class="fas fa-clock"></i>
+                                <p>Free time to explore</p>
+                            </div>
+                            <div class="inclusion-item">
+                                <i class="fas fa-suitcase-rolling"></i>
+                                <p>Luggage assistance always</p>
+                            </div>
+                            <div class="inclusion-item">
+                                <i class="fas fa-spa"></i>
+                                <p>Wellness access (gym, yoga, Pilates)</p>
+                            </div>
+                            <div class="inclusion-item">
+                                <i class="fas fa-futbol"></i>
+                                <p>Sports (padel, soccer, tennis)</p>
+                            </div>
+                            <div class="inclusion-item">
+                                <i class="fas fa-briefcase-medical"></i>
+                                <p>Basic medical assistance</p>
+                            </div>
+                            <div class="inclusion-item">
+                                <i class="fas fa-user-tie"></i>
+                                <p>Personal host</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="inclusions-full-section">
+                        <h3 class="whats-included-main-title">What's Not Included</h3>
+
+                        <div class="inclusions-grid-4x3">
+                            <div class="inclusion-item not-included">
+                                <i class="fas fa-plane-departure"></i>
+                                <p>International flights</p>
+                            </div>
+
+                            <div class="inclusion-item not-included">
+                                <i class="fas fa-shopping-bag"></i>
+                                <p>Personal purchases</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="what-we-believe" class="why-us-carousel-section animate-on-scroll">
+            <h2>What We Believe</h2>
+            <div class="why-us-container">
+                <div class="why-us-text-block">
+                    <h3>Travel should move you. It should touch your senses, tell you a story, and make you feel alive.
+                    </h3>
+                    <p>This isn't about visiting a destination. It's about becoming part of it.</p>
+                    <p>This is Tocca Amalfi. Travel, reimagined — for those who want to feel something deeper.</p>
+                    <p><strong>Let's create something beautiful together.</strong></p>
+                </div>
+                <div class="why-us-image-grid">
+                    <img class="img-vespa" src="imagenesparapaginas/whatwebelieve.jpeg"
+                        alt="Riding a Vespa through hidden cliffside roads">
+                </div>
+            </div>
+        </section>
+
+
+
+        <div id="highlightsModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>✨ Journey Highlights</h2>
+                    <span class="close" onclick="closeHighlightsModal()">&times;</span>
+                </div>
+                <div class="modal-body">
+                    <div class="highlights-grid">
+                        <div class="highlight-card">
+                            <div class="highlight-icon">🍋</div>
+                            <h3>Limoncello Under Ancient Trees</h3>
+                            <p>Taste authentic limoncello in historic lemon groves of Sorrento</p>
+                        </div>
+                        <div class="highlight-card">
+                            <div class="highlight-icon">🛵</div>
+                            <h3>Vespa Through Cliffside Villages</h3>
+                            <p>Wind through hidden coastal roads to secret viewpoints</p>
+                        </div>
+                        <div class="highlight-card">
+                            <div class="highlight-icon">🚤</div>
+                            <h3>Private Sunset Sailing</h3>
+                            <p>Sail into golden sunsets with prosecco and Italian aperitivos</p>
+                        </div>
+                        <div class="highlight-card">
+                            <div class="highlight-icon">🍝</div>
+                            <h3>Cooking with Local Families</h3>
+                            <p>Learn ancient recipes in authentic Italian kitchens</p>
+                        </div>
+                        <div class="highlight-card">
+                            <div class="highlight-icon">🌸</div>
+                            <h3>Enchanting Capri</h3>
+                            <p>Explore the legendary Blue Grotto and Villa San Michele</p>
+                        </div>
+                        <div class="highlight-card">
+                            <div class="highlight-icon">🏛</div>
+                            <h3>Pompeii & Ancient Wonders</h3>
+                            <p>Walk through history with expert archaeological guides</p>
+                        </div>
+                        <div class="highlight-card">
+                            <div class="highlight-icon">🍷</div>
+                            <h3>Wine Tasting in the Hills</h3>
+                            <p>Sample regional wines at family-owned vineyards</p>
+                        </div>
+                        <div class="highlight-card">
+                            <div class="highlight-icon">🗿</div>
+                            <h3>Ravello's Romance</h3>
+                            <p>Experience the gardens of Villa Rufolo and Villa Cimbrone</p>
+                        </div>
+                    </div>
+                    <div class="modal-cta">
+                        <button class="cta-button" onclick="closeHighlightsModal(); openCustomizeModal();">
+                            Ready to Customize Your Journey?
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="customizeModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>🎨 Customize Your Perfect Journey</h2>
+                    <span class="close" onclick="closeCustomizeModal()">&times;</span>
+                </div>
+                <div class="modal-body">
+                    <p class="customize-intro">Tell us about your dream Italian experience and we'll craft a
+                        personalized journey just for you.</p>
+
+                    <form class="customize-form" onsubmit="submitCustomization(event)">
+                        <div class="form-group">
+                            <label for="groupSize">Group Size</label>
+                            <select id="groupSize" name="groupSize" required>
+                                <option value="">Select group size</option>
+                                <option value="2">2 people</option>
+                                <option value="3-4">3-4 people</option>
+                                <option value="5-6">5-6 people</option>
+                                <option value="7+">7+ people</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="duration">Preferred Duration</label>
+                            <select id="duration" name="duration" required>
+                                <option value="">Select duration</option>
+                                <option value="7">7 days</option>
+                                <option value="11">11 days (recommended)</option>
+                                <option value="14">14 days</option>
+                                <option value="custom">Custom length</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>What interests you most? (Select all that apply)</label>
+                            <div class="checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="interests" value="cuisine"> 🍝 Culinary experiences
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="interests" value="history"> 🏛 Historical sites
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="interests" value="nature"> 🌿 Nature & hiking
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="interests" value="art"> 🎨 Art & culture
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="interests" value="wine"> 🍷 Wine tasting
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="interests" value="adventure"> 🛵 Adventure activities
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="interests" value="yoga"> 🧘‍♀️ Yoga & wellness
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="accommodation">Accommodation Preference</label>
+                            <select id="accommodation" name="accommodation" required>
+                                <option value="">Select preference</option>
+                                <option value="luxury">Luxury hotels & resorts</option>
+                                <option value="boutique">Boutique properties</option>
+                                <option value="local">Local guesthouses & B&Bs</option>
+                                <option value="mix">Mix of different styles</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="specialRequests">Special Requests or Dreams</label>
+                            <textarea id="specialRequests" name="specialRequests" rows="4"
+                                placeholder="Tell us about any special celebrations, dietary needs, or specific experiences you're dreaming of..."></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required placeholder="your@email.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" required placeholder="Your name">
+                        </div>
+
+                        <button type="submit" class="submit-button">
+                            Create My Dream Journey ✨
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <section id="testimonials" class="testimonials-section animate-on-scroll">
+            <h2>What Our Guests Say</h2>
+            <div class="testimonial-cards-grid">
+                <div class="testimonial-card">
+                    <p>"An experience that exceeded all expectations. Tocca Amalfi isn't a tour, it's an immersion into
+                        Italian culture. Unforgettable!"</p>
+                    <h4>- Sophia L.</h4>
+                </div>
+                <div class="testimonial-card">
+                    <p>"The attention to detail was impressive. From the hotels to the private excursions, everything
+                        was
+                        first-class. I already want to go back!"</p>
+                    <h4>- Matthew R.</h4>
+                </div>
+                <div class="testimonial-card">
+                    <p>"Every moment felt curated just for us. The blend of luxury and authentic Italian experiences was
+                        perfect."</p>
+                    <h4>- Elena P.</h4>
+                </div>
+                <div class="testimonial-card">
+                    <p>"From Capri to Positano, every stop was magical. Our host made everything seamless and
+                        memorable."</p>
+                    <h4>- James T.</h4>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact-section" class="contact-us-section animate-on-scroll">
+            <h2>Not ready to reserve at this moment?</h2>
+            <p>Feel free to connect however you prefer. I'll guide you through the experiences, answer your questions,
+                and help you explore whether aligns beautifully with what you're dreaming of.</p>
+            <a href="#" class="contact-button" onclick="openRequestModal(); return false;">Let's explore together →</a>
+        </section>
+
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script src="script.js"></script>
+
+    <script>
+        // OFFERINGS TOGGLE (Movido a script.js)
+
+        // CONTACT MENU TOGGLE
+        let contactMenuOpen = false;
+        function toggleContactMenu() {
+            const menu = document.getElementById('contact-menu');
+            menu.classList.toggle('active');
+            contactMenuOpen = !contactMenuOpen;
+        }
+        document.addEventListener('click', function (event) {
+            const menu = document.getElementById('contact-menu');
+            if (menu && !menu.contains(event.target) && contactMenuOpen) {
+                toggleContactMenu();
+            }
+        });
+
+        // MODAL FUNCTIONS
+        function openHighlightsModal() {
+            document.getElementById('highlightsModal').style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeHighlightsModal() {
+            document.getElementById('highlightsModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        function openCustomizeModal() {
+            document.getElementById('customizeModal').style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeCustomizeModal() {
+            document.getElementById('customizeModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside of it
+        window.onclick = function (event) {
+            const highlightsModal = document.getElementById('highlightsModal');
+            const customizeModal = document.getElementById('customizeModal');
+
+            if (event.target === highlightsModal) {
+                closeHighlightsModal();
+            }
+            if (event.target === customizeModal) {
+                closeCustomizeModal();
+            }
+        }
+
+        // Handle form submission
+        function submitCustomization(event) {
+            event.preventDefault();
+
+            const formData = new FormData(event.target);
+            const interests = [];
+            const checkboxes = document.querySelectorAll('input[name="interests"]:checked');
+            checkboxes.forEach(checkbox => interests.push(checkbox.value));
+
+            // Create email body
+            const emailBody = `
+New Customization Request:
+
+Name: ${formData.get('name')}
+Email: ${formData.get('email')}
+Group Size: ${formData.get('groupSize')}
+Duration: ${formData.get('duration')}
+Interests: ${interests.join(', ')}
+Accommodation: ${formData.get('accommodation')}
+Special Requests: ${formData.get('specialRequests')}
+            `;
+
+            // Create mailto link
+            const mailtoLink = `mailto:info@toccaamalfi.com?subject=Custom Tour Request - ${formData.get('name')}&body=${encodeURIComponent(emailBody)}`;
+
+            // Open email client
+            window.location.href = mailtoLink;
+
+            // Close modal and show confirmation
+            closeCustomizeModal();
+            alert('Thank you! Your email client will open to send your customization request.');
+        }
+
+        // Close modals with Escape key
+        document.addEventListener('keydown', function (event) {
+            if (event.key === 'Escape') {
+                closeHighlightsModal();
+                closeCustomizeModal();
+            }
+        });
+    </script>
+
+    <!-- Remove duplicate script tags and consolidate -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="script.js"></script>
+
+    <script>
+        // Initialize carousel after everything loads
+        $(document).ready(function () {
+            // Wait a bit for images to load
+            setTimeout(function () {
+                if ($('.what-we-offer-carousel').length && !$('.what-we-offer-carousel').hasClass('slick-initialized')) {
+                    $('.what-we-offer-carousel').slick({
+                        infinite: true,
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        autoplay: true,
+                        autoplaySpeed: 4000,
+                        arrows: true,
+                        dots: true,
+                        fade: true,
+                        cssEase: 'linear',
+                        responsive: [
+                            {
+                                breakpoint: 768,
+                                settings: {
+                                    arrows: false
+                                }
+                            }
+                        ]
+                    });
+                    console.log('Carousel initialized successfully');
+                }
+            }, 500);
+        });
+    </script>
+
+    <!-- REQUEST SPOT MODAL -->
+    <div id="requestModal" class="request-modal">
+        <div class="request-modal-content">
+            <span class="request-modal-close" onclick="closeRequestModal()">&times;</span>
+            <h2>Interest? Let's connect</h2>
+
+            <div class="request-contact-options">
+                <div class="request-option">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email Jessica</h3>
+                    <p>Perfect for detailed questions, special requests, or sharing your travel plans.</p>
+                    <p class="contact-detail">info@toccaamalfi.com</p>
+                    <a href="mailto:info@toccaamalfi.com?subject=More%20information%20-%20Tocca"
+                        class="request-btn">Send an Email</a>
+                </div>
+
+                <div class="request-option">
+                    <i class="fas fa-phone"></i>
+                    <h3>Request a Call</h3>
+                    <p>Ideal if you'd like to talk through the journey or design something more custom.</p>
+                    <p class="contact-detail">Jessica will follow up to confirm a time.</p>
+                    <a href="mailto:info@toccaamalfi.com?subject=Call%20request%20-%20Tocca"
+                        class="request-btn">Schedule a Call</a>
+                </div>
+
+                <div class="request-option">
+                    <i class="fab fa-whatsapp"></i>
+                    <h3>WhatsApp</h3>
+                    <p>Perfect for quick questions or real-time availability.</p>
+                    <p class="contact-detail">+1 646 229 8158</p>
+                    <a href="https://wa.me/16462298158?text=Hello!%20I%27d%20like%20more%20information%20about%20Tocca."
+                        target="_blank" class="request-btn">Send a Message</a>
+                </div>
+
+                <div class="request-option">
+                    <i class="fas fa-comment"></i>
+                    <h3>Text Message</h3>
+                    <p>Send a text message directly to Jessica for quick communication.</p>
+                    <p class="contact-detail">+1 646 229 8158</p>
+                    <a href="sms:+16462298158?body=Hello!%20I%27d%20like%20more%20information%20about%20Tocca."
+                        class="request-btn">Send a Text</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openRequestModal() {
+            document.getElementById('requestModal').style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeRequestModal() {
+            document.getElementById('requestModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        window.onclick = function (event) {
+            const modal = document.getElementById('requestModal');
+            if (event.target == modal) {
+                closeRequestModal();
+            }
+        }
+    </script>
+
+</body>
+
+</html>

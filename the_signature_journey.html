@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signature Journey - Tocca Amalfi Coast</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;700&family=Playfair+Display:wght@400;700&family=Style+Script&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+</head>
+
+<body>
+
+    <a href="index.html#hero" class="home-button" title="Back to Home">
+        <i class="fas fa-home"></i>
+        <span class="home-text">Home</span>
+    </a>
+
+    <div id="contact-menu" class="contact-menu">
+        <button class="contact-toggle" onclick="toggleContactMenu()">
+            <i class="fas fa-envelope"></i>
+            <span class="contact-text">Contact Us</span>
+        </button>
+        <div class="contact-options">
+            <a href="mailto:info@toccaamalfi.com?subject=More%20information%20-%20Signature%20Journey" class="contact-option" title="Email Us">
+                <i class="fas fa-envelope"></i>
+                <span>Email</span>
+            </a>
+            <a href="https://wa.me/16462298158?text=Hello!%20I'd%20like%20to%20know%20more%20about%20the%20tours." target="_blank" class="contact-option" title="WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+                <span>WhatsApp</span>
+            </a>
+            <a href="tel:+16462298158" class="contact-option" title="Call Us">
+                <i class="fas fa-phone"></i>
+                <span>Call</span>
+            </a>
+        </div>
+    </div>
+
+    <header class="main-header">
+        <nav class="navbar">
+            <a href="index.html#hero" class="nav-logo-container">
+                <img src="imagenes/tocca_amalfi_nav.png" alt="Tocca Amalfi Logo" class="nav-logo">
+            </a>
+            <div class="nav-menu">
+                <a href="index.html#why-tocca-amalfi" class="nav-link">Why Choose Us?</a>
+                <a href="index.html#what-we-offer" class="nav-link">What We Offer</a>
+                <a href="index.html#our-experiences" class="nav-link">Our Experiences</a>
+                <a href="faq.html" class="nav-link">FAQ</a>
+                <a href="#" class="nav-link" onclick="openRequestModal(); return false;">Contact Us</a>
+            </div>
+            <button class="hamburger" aria-label="Open menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- HERO SECTION - Two Column Layout -->
+        <section class="signature-hero">
+            <div class="signature-hero-content">
+                <a href="index.html#hero" class="back-home-link"><i class="fas fa-arrow-left"></i> Back to Home</a>
+                <h1>The Signature Journey</h1>
+                <p class="signature-subtitle">10 Days to Touch the Soul of the Amalfi Coast</p>
+                <p class="signature-description">Our Flagship Experience — crafted for travelers who want more than a vacation. An immersive journey through the true essence of the Amalfi Coast.</p>
+                <div class="signature-hero-cta">
+                    <a href="#" class="btn-primary-large" onclick="openRequestModal(); return false;">Interest? Let's connect →</a>
+                    <a href="#signature-why" class="btn-secondary-large">Learn More →</a>
+                </div>
+            </div>
+            <div class="signature-hero-image">
+                <img src="imagenes/signature journey.jpg" alt="Amalfi Coast panoramic view">
+            </div>
+        </section>
+
+        <!-- WHY SIGNATURE JOURNEY -->
+        <section id="signature-why" class="signature-why-section">
+            <div class="signature-why-wrapper">
+                <div class="signature-why-content">
+                    <h2>Why the Signature Journey?</h2>
+                    <p class="signature-opening">Because the Amalfi Coast isn't a place you simply visit — <strong>it's a place you feel.</strong></p>
+                    
+                    <p>Our Signature Journey is Tocca Amalfi Coast's <strong>flagship immersion, designed for travelers who want to uncover the true essence of the Coast:</strong> its spirit, its flavors, its people, and the quiet magic that lives between the cliffs and the sea.</p> and the sea.</p>
+                    
+                    <p><strong>Across 10 unforgettable days</strong>, you will not only see the Coast — you will <strong>touch its soul</strong> through curated experiences, private connections, and a rhythm of slow, intentional travel that lets every moment breathe.</p>
+                    
+                    <div class="signature-features-grid">
+                        <div class="signature-feature">
+                            <i class="fas fa-hotel"></i>
+                            <p>Boutique hotels with sea-view terraces</p>
+                        </div>
+                        <div class="signature-feature">
+                            <i class="fas fa-users"></i>
+                            <p>Local hosts who open their homes, kitchens, and stories</p>
+                        </div>
+                        <div class="signature-feature">
+                            <i class="fas fa-gem"></i>
+                            <p>Exclusive experiences impossible to access on your own</p>
+                        </div>
+                        <div class="signature-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <p>A seamless flow — every detail handled for you</p>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                <div class="signature-why-carousel">
+                    <div class="carousel-container">
+                        <div class="carousel-slide active">
+                            <img src="imagenesparapaginas/carruselsignature1.jpeg" alt="Amalfi Coast view">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="imagenesparapaginas/carruselsignature2.jpeg" alt="Amalfi Coast gardens">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="imagenesparapaginas/carruselsignature3.jpeg" alt="Amalfi Coast village">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="imagenesparapaginas/carruselsignature4.jpeg" alt="Amalfi Coast harbor">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="imagenesparapaginas/carruselsignature5.jpeg" alt="Amalfi Coast rocks">
+                        </div>
+                    </div>
+                    <button class="carousel-btn prev" onclick="moveCarousel(-1)">&#10094;</button>
+                    <button class="carousel-btn next" onclick="moveCarousel(1)">&#10095;</button>
+                    <div class="carousel-dots">
+                        <span class="dot active" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                        <span class="dot" onclick="currentSlide(4)"></span>
+                        <span class="dot" onclick="currentSlide(5)"></span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- STAMP OVERLAY -->
+            <div class="signature-stamp-overlay">
+                <div class="stamp-content">
+                    <p>This is more than a trip. It's an invitation to live the Coast.</p>
+                    <div class="signature-cta-buttons signature-cta-buttons--stamp">
+                        <a href="#" class="btn-primary-large" onclick="openRequestModal(); return false;">Interest? Let's connect →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WHAT IT'S ABOUT -->
+        <section class="signature-about-section">
+            <div class="signature-about-wrapper">
+                <div class="signature-about-content">
+                    <h2><i class="fas fa-leaf"></i> What the Signature Journey Is All About</h2>
+                    
+                    <p>Every day unveils a different layer of the Amalfi Coast and beyond - from the pastel villages of <strong>Positano and Amalfi</strong> to the quiet beauty of <strong>Maiori, Minori, Atrani, Ravello, Tramonti, Praiano, Conca dei Marini</strong>, and the island of <strong>Capri</strong> & <strong>Pompeii</strong></p>
+                    
+                    <p>You will discover the Coast's flavors, landscapes, and traditions in a soft balance of culture, movement, and pure Mediterranean joy.</p>
+                    
+                    <h3>This journey is perfect for travelers who want:</h3>
+                    <ul class="journey-perfect-for">
+                        <li><i class="fas fa-heart"></i> Authentic connection</li>
+                        <li><i class="fas fa-palette"></i> Curated beauty</li>
+                        <li><i class="fas fa-clipboard-check"></i> Zero planning</li>
+                        <li><i class="fas fa-concierge-bell"></i> High-touch service</li>
+                        <li><i class="fas fa-sun"></i> A soul-deep travel experience</li>
+                    </ul>
+                </div>
+                
+                <div class="signature-about-image">
+                    <img src="imagenesparapaginas/despuesdelcarrusel.jpeg" alt="Amalfi Coast Journey">
+                </div>
+            </div>
+        </section>
+
+        <!-- WHAT AWAITS YOU -->
+        <section class="signature-experiences-section">
+            <div class="signature-container">
+                <h2>What Awaits You</h2>
+                <p class="experiences-intro">Immerse yourself in the authentic soul of the Amalfi Coast</p>
+                
+                <div class="signature-experiences-grid">
+                    <div class="experience-card">
+                        <img src="imagenesparapaginas/lemongroves.jpeg" alt="Hands harvesting Amalfi lemons">
+                        <div class="experience-card-content">
+                            <h3>Lemon Groves &amp; Limoncello Making</h3>
+                            <p>Walk the terraces with local growers and craft your own limoncello straight from the source.</p>
+                        </div>
+                    </div>
+
+                    <div class="experience-card">
+                        <img src="imagenesparapaginas/oliveoiltasting.jpeg" alt="Tasting premium olive oils">
+                        <div class="experience-card-content">
+                            <h3>Olive Groves &amp; Olive Oil Tasting</h3>
+                            <p>Savor liquid gold while learning the art of pressing from families who have tended these groves for generations.</p>
+                        </div>
+                    </div>
+
+                    <div class="experience-card">
+                        <img src="imagenesparapaginas/cookingclass.jpeg" alt="Cooking with seasonal ingredients">
+                        <div class="experience-card-content">
+                            <h3>Cooking Class</h3>
+                            <p>Create multi-course coastal dishes with a local chef and gather around the table to enjoy them.</p>
+                        </div>
+                    </div>
+
+                    <div class="experience-card">
+                        <img src="imagenesparapaginas/Ceramic.jpeg" alt="Decorative ceramics inspiration">
+                        <div class="experience-card-content">
+                            <h3>Ceramic Making Workshop</h3>
+                            <p>Shape and glaze vibrant Vietri-inspired pieces to bring a touch of the coast home.</p>
+                        </div>
+                    </div>
+
+                    <div class="experience-card">
+                        <img src="imagenesparapaginas/Privateboats.jpeg" alt="Private boat cruising the Amalfi Coast">
+                        <div class="experience-card-content">
+                            <h3>Private Boat Day</h3>
+                            <p>Set your own course on a private vessel, stopping for swims in crystalline coves.</p>
+                        </div>
+                    </div>
+
+                    <div class="experience-card">
+                        <img src="imagenesparapaginas/Vineyardandwinetasting.jpeg" alt="Vineyard on the Amalfi Coast">
+                        <div class="experience-card-content">
+                            <h3>Vineyard &amp; Wine Tasting</h3>
+                            <p>Sip rare vintages in hillside cellars and meet the winemakers behind each bottle.</p>
+                        </div>
+                    </div>
+
+                    <div class="experience-card">
+                        <img src="imagenesparapaginas/vesparide.jpeg" alt="Couple riding a Vespa in Amalfi">
+                        <div class="experience-card-content">
+                            <h3>Vespa Ride</h3>
+                            <p>Feel the coastal breeze as you zip past pastel villages on a vintage Vespa.</p>
+                        </div>
+                    </div>
+
+                    <div class="experience-card">
+                        <img src="imagenesparapaginas/Pompei.jpg" alt="Exploring Pompeii ruins">
+                        <div class="experience-card-content">
+                            <h3>Pompeii</h3>
+                            <p>Walk the storied streets of Pompeii with an archaeological guide illuminating every detail.</p>
+                        </div>
+                    </div>
+
+                    <div class="experience-card">
+                        <img src="imagenesparapaginas/positano.jpeg" alt="Colorful Positano cliffs">
+                        <div class="experience-card-content">
+                            <h3>Positano</h3>
+                            <p>Climb the vibrant stairways of Positano and browse chic boutiques tucked into the cliffs.</p>
+                        </div>
+                    </div>
+
+                    <div class="experience-card">
+                        <img src="imagenesparapaginas/Coast.jpg" alt="Amalfi Cathedral façade">
+                        <div class="experience-card-content">
+                            <h3>Amalfi</h3>
+                            <p>Discover Amalfi's maritime legacy and its striking cathedral overlooking the piazza.</p>
+                        </div>
+                    </div>
+
+                    <div class="experience-card">
+                        <img src="imagenesparapaginas/Garden_of_Villa_Rufolo_in_Ravello_village.jpg" alt="Villa Rufolo gardens in Ravello">
+                        <div class="experience-card-content">
+                            <h3>Ravello</h3>
+                            <p>Lose yourself in Ravello’s cliffside villas, famed gardens, and open-air concerts.</p>
+                        </div>
+                    </div>
+
+                    <div class="experience-card">
+                        <img src="imagenesparapaginas/Coast.jpg" alt="Atrani coastline">
+                        <div class="experience-card-content">
+                            <h3>Atrani</h3>
+                            <p>Wander the winding alleys of Atrani, Italy's smallest seaside village.</p>
+                        </div>
+                    </div>
+
+                    <div class="experience-card">
+                        <img src="imagenesparapaginas/Capri.jpeg" alt="Capri island day trip">
+                        <div class="experience-card-content">
+                            <h3>Capri Island Day</h3>
+                            <p>Sail to Capri for chic piazzettas, hidden coves, and the legendary Blue Grotto.</p>
+                        </div>
+                    </div>
+
+                    <div class="experience-card">
+                        <img src="imagenesparapaginas/Maiori_ Amalfi_Coast_Italy.jpg" alt="View over Tramonti">
+                        <div class="experience-card-content">
+                            <h3>Tramonti</h3>
+                            <p>Head inland to verdant Tramonti for rustic wineries and slow countryside living.</p>
+                        </div>
+                    </div>
+
+                    <div class="experience-card">
+                        <img src="imagenesparapaginas/Bay_of_Conca_di_Marini_Amalfi_Coast.jpg" alt="Conca dei Marini bay">
+                        <div class="experience-card-content">
+                            <h3>Conca dei Marini</h3>
+                            <p>Take in sweeping vistas and the famed Emerald Grotto in picturesque Conca dei Marini.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <p class="experiences-closing-note" style="text-align: center; font-style: italic; color: #5a5a5a; margin-top: 40px; font-size: 1.1rem;">Just a taste of your Signature Journey. Many more handcrafted moments await.</p>
+            </div>
+        </section>
+
+        <!-- JOURNEY TIMELINE -->
+        <section class="journey-timeline-section">
+            <div class="everything-taken-care-container">
+                <h2 class="etc-title">Your journey, flawlessly curated.</h2>
+                <p class="etc-subtitle">From arrival to departure, every detail is seamlessly arranged—so you can simply arrive, immerse, and embrace la dolce vita.</p>
+                
+                <div class="journey-timeline" style="display: flex; justify-content: center; align-items: flex-start; width: 100%; max-width: 1200px; margin: 60px auto 40px auto; position: relative; padding: 0 20px;">
+                    <!-- Línea horizontal conectora -->
+                    <div style="position: absolute; top: 40px; left: 60px; right: 60px; height: 3px; background: #4A9A92; z-index: 0;"></div>
+                    
+                    <div class="timeline-item" style="display: flex; flex-direction: column; align-items: center; z-index: 1; margin: 0 40px;">
+                        <div style="width: 80px; height: 80px; background: #4A9A92; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                            <i class="fas fa-plane-arrival" style="font-size: 2rem; color: white;"></i>
+                        </div>
+                        <span style="font-family: 'Montserrat', sans-serif; font-size: 0.95rem; font-weight: 600; color: #3a3a3a; text-align: center;">Arrival</span>
+                    </div>
+                    
+                    <div class="timeline-item" style="display: flex; flex-direction: column; align-items: center; z-index: 1; margin: 0 40px;">
+                        <div style="width: 80px; height: 80px; background: #4A9A92; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                            <i class="fas fa-ship" style="font-size: 2rem; color: white;"></i>
+                        </div>
+                        <span style="font-family: 'Montserrat', sans-serif; font-size: 0.95rem; font-weight: 600; color: #3a3a3a; text-align: center;">Transportation<br>(Boats and Cars)</span>
+                    </div>
+                    
+                    <div class="timeline-item" style="display: flex; flex-direction: column; align-items: center; z-index: 1; margin: 0 40px;">
+                        <div style="width: 80px; height: 80px; background: #4A9A92; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                            <i class="fas fa-home" style="font-size: 2rem; color: white;"></i>
+                        </div>
+                        <span style="font-family: 'Montserrat', sans-serif; font-size: 0.95rem; font-weight: 600; color: #3a3a3a; text-align: center;">Accommodations</span>
+                    </div>
+                    
+                    <div class="timeline-item" style="display: flex; flex-direction: column; align-items: center; z-index: 1; margin: 0 40px;">
+                        <div style="width: 80px; height: 80px; background: #4A9A92; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                            <i class="fas fa-utensils" style="font-size: 2rem; color: white;"></i>
+                        </div>
+                        <span style="font-family: 'Montserrat', sans-serif; font-size: 0.95rem; font-weight: 600; color: #3a3a3a; text-align: center;">Meals</span>
+                    </div>
+                    
+                    <div class="timeline-item" style="display: flex; flex-direction: column; align-items: center; z-index: 1; margin: 0 40px;">
+                        <div style="width: 80px; height: 80px; background: #4A9A92; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                            <i class="fas fa-motorcycle" style="font-size: 2rem; color: white;"></i>
+                        </div>
+                        <span style="font-family: 'Montserrat', sans-serif; font-size: 0.95rem; font-weight: 600; color: #3a3a3a; text-align: center;">Curated<br>Experiences</span>
+                    </div>
+                    
+                    <div class="timeline-item" style="display: flex; flex-direction: column; align-items: center; z-index: 1; margin: 0 40px;">
+                        <div style="width: 80px; height: 80px; background: #4A9A92; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                            <i class="fas fa-plane-departure" style="font-size: 2rem; color: white;"></i>
+                        </div>
+                        <span style="font-family: 'Montserrat', sans-serif; font-size: 0.95rem; font-weight: 600; color: #3a3a3a; text-align: center;">Departure</span>
+                    </div>
+                </div>
+
+                <!-- Previous copy kept for quick rollback -->
+                <!--
+                <div class="signature-inclusions-grid">
+                    <div class="signature-inclusion-card">
+                        <i class="fas fa-hotel"></i>
+                        <h3>Boutique Accommodations</h3>
+                        <p>Handpicked hotels with sea-view rooms and coastal elegance</p>
+                    </div>
+                    
+                    <div class="signature-inclusion-card">
+                        <i class="fas fa-utensils"></i>
+                        <h3>All Meals Included</h3>
+                        <p>Daily breakfast, welcome & farewell dinners, curated lunch experiences</p>
+                    </div>
+                    
+                    <div class="signature-inclusion-card">
+                        <i class="fas fa-car"></i>
+                        <h3>Private Transportation</h3>
+                        <p>Luxury vehicles for all transfers and coastal explorations</p>
+                    </div>
+                    
+                    <div class="signature-inclusion-card">
+                        <i class="fas fa-ship"></i>
+                        <h3>Private Boat Excursions</h3>
+                        <p>Full day sailing to Capri or hidden coastal coves</p>
+                    </div>
+                    
+                    <div class="signature-inclusion-card">
+                        <i class="fas fa-heart"></i>
+                        <h3>Cooking with Nonna</h3>
+                        <p>Authentic family kitchen experience with traditional recipes</p>
+                    </div>
+                    
+                    <div class="signature-inclusion-card">
+                        <i class="fas fa-wine-glass-alt"></i>
+                        <h3>Vineyard Experience</h3>
+                        <p>Wine tasting and lunch in the hills of Tramonti</p>
+                    </div>
+                    
+                    <div class="signature-inclusion-card">
+                        <i class="fas fa-lemon"></i>
+                        <h3>Lemon Grove Walks</h3>
+                        <p>Stroll through ancient terraces and taste limoncello</p>
+                    </div>
+                    
+                    <div class="signature-inclusion-card">
+                        <i class="fas fa-pizza-slice"></i>
+                        <h3>Culinary Workshops</h3>
+                        <p>Pizza-making or mozzarella experience with local artisans</p>
+                    </div>
+                    
+                    <div class="signature-inclusion-card">
+                        <i class="fas fa-motorcycle"></i>
+                        <h3>Vespa-Style Tours</h3>
+                        <p>Coastal rides or private driver for scenic mountain routes</p>
+                    </div>
+                    
+                    <div class="signature-inclusion-card">
+                        <i class="fas fa-landmark"></i>
+                        <h3>Pompeii Guided Tour</h3>
+                        <p>Expert-led exploration of ancient Roman history</p>
+                    </div>
+                    
+                    <div class="signature-inclusion-card">
+                        <i class="fas fa-user-tie"></i>
+                        <h3>Dedicated Local Host</h3>
+                        <p>Your personal guide accompanying you throughout the journey</p>
+                    </div>
+                    
+                    <div class="signature-inclusion-card">
+                        <i class="fas fa-concierge-bell"></i>
+                        <h3>24/7 Concierge Support</h3>
+                        <p>Always available to ensure seamless experiences</p>
+                    </div>
+                    
+                    <div class="signature-inclusion-card">
+                        <i class="fas fa-dumbbell"></i>
+                        <h3>Wellness Access</h3>
+                        <p>Gym, yoga, Pilates options based on your preference</p>
+                    </div>
+                    
+                    <div class="signature-inclusion-card">
+                        <i class="fas fa-running"></i>
+                        <h3>Active Adventures</h3>
+                        <p>Tennis, padel, hiking, kayaking opportunities</p>
+                    </div>
+                    
+                    <div class="signature-inclusion-card">
+                        <i class="fas fa-clock"></i>
+                        <h3>Free Time to Explore</h3>
+                        <p>Balance between curated experiences and personal discovery</p>
+                    </div>
+                    
+                    <div class="signature-inclusion-card">
+                        <i class="fas fa-suitcase"></i>
+                        <h3>Luggage Assistance</h3>
+                        <p>Help with transfers and accommodations throughout</p>
+                    </div>
+                </div>
+                -->
+            </div>
+        </section>
+
+        <!-- 2025 DEPARTURES -->
+        <section class="signature-departures-section">
+            <div class="signature-container">
+                <h2><i class="fas fa-calendar-alt"></i> 2025 Departures & Availability</h2>
+                <p class="departures-intro">Below are the three Signature Journey dates, with current availability:</p>
+                
+                <div class="departures-carousel-wrapper">
+                    <div class="departures-carousel">
+                        <div class="departure-card">
+                            <div class="departure-header">
+                                <h3>June<br><span class="dates-range">17th–26th</span></h3>
+                            </div>
+                            <span class="availability filling-fast">Few spots</span>
+                            <a href="#" class="departure-cta" onclick="openRequestModal(); return false;">Few Spots →</a>
+                        </div>
+                        
+                        <div class="departure-card featured">
+                            <div class="departure-header">
+                                <h3>September<br><span class="dates-range">22nd–Oct 1st</span></h3>
+                            </div>
+                            <span class="availability high-availability">Available</span>
+                            <a href="#" class="departure-cta" onclick="openRequestModal(); return false;">Available →</a>
+                        </div>
+                        
+                        <div class="departure-card">
+                            <div class="departure-header">
+                                <h3>October<br><span class="dates-range">5th–14th</span></h3>
+                            </div>
+                            <span class="availability high-availability">Available</span>
+                            <a href="#" class="departure-cta" onclick="openRequestModal(); return false;">Available →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WHY CHOOSE -->
+        <section class="signature-why-choose-section">
+            <div class="signature-container">
+                <h2>Why Choose The Signature Journey</h2>
+                
+                <div class="why-choose-grid" style="display:flex; gap:25px; justify-content:center; align-items:stretch; flex-wrap:nowrap;">
+                    <div class="why-choose-item" style="flex:1 1 0; min-width:0; box-sizing:border-box;">
+                        <h3><i class="fas fa-trophy"></i> Our Flagship Experience</h3>
+                        <p>Created to give you the <strong>deepest connection to the Amalfi Coast</strong> — with the perfect balance of curated activities and free time.</p>
+                    </div>
+                    
+                    <div class="why-choose-item" style="flex:1 1 0; min-width:0; box-sizing:border-box;">
+                        <h3><i class="fas fa-clock"></i> Slow Travel, Done Right</h3>
+                        <p><strong>No rushing. No overpacked days.</strong> Just intentional beauty and experiences that stay with you.</p>
+                    </div>
+                    
+                    <div class="why-choose-item" style="flex:1 1 0; min-width:0; box-sizing:border-box;">
+                        <h3><i class="fas fa-heart"></i> Experiences That Stay With You</h3>
+                        <p>From cooking with Nonna to sailing through turquoise waters — <strong>every detail is handpicked</strong> to immerse you in the art of Coast living.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DISCOVERY CALL -->
+        <section class="signature-discovery-section">
+            <div class="signature-container">
+                <h2>Not ready to reserve at this moment?</h2>
+                <p>Feel free to connect however you prefer. I'll guide you through the experiences, answer your questions, and help you explore whether aligns beautifully with what you're dreaming of.</p>
+                <a href="#" class="btn-secondary-large" onclick="openRequestModal(); return false;">Let's explore together →</a>
+            </div>
+        </section>
+
+        <!-- FINAL CTA -->
+        <section class="signature-final-cta">
+            <div class="signature-container">
+                <div class="final-cta-buttons">
+                    <a href="#" class="btn-primary-xl" onclick="openRequestModal(); return false;">Interest? Let's connect →</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- REQUEST SPOT MODAL -->
+    <div id="requestModal" class="request-modal">
+        <div class="request-modal-content">
+            <span class="request-modal-close" onclick="closeRequestModal()">&times;</span>
+            <h2>Interest? Let's connect</h2>
+            
+            <div class="request-contact-options">
+                <div class="request-option">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email Jessica</h3>
+                    <p>Perfect for detailed questions, special requests, or sharing your travel plans.</p>
+                    <p class="contact-detail">info@toccaamalfi.com</p>
+                    <a href="mailto:info@toccaamalfi.com?subject=More%20information%20-%20Signature%20Journey" class="request-btn">Send an Email</a>
+                </div>
+                
+                <div class="request-option">
+                    <i class="fas fa-phone"></i>
+                    <h3>Request a Call</h3>
+                    <p>Ideal if you'd like to talk through the journey or design something more custom.</p>
+                    <p class="contact-detail">Jessica will follow up to confirm a time.</p>
+                    <a href="mailto:info@toccaamalfi.com?subject=Call%20request%20-%20Signature%20Journey" class="request-btn">Schedule a Call</a>
+                </div>
+                
+                <div class="request-option">
+                    <i class="fab fa-whatsapp"></i>
+                    <h3>WhatsApp</h3>
+                    <p>Perfect for quick questions or real-time availability.</p>
+                    <p class="contact-detail">+1 646 229 8158</p>
+                    <a href="https://wa.me/16462298158?text=Hello!%20I'd%20like%20to%20request%20my%20spot%20for%20the%20Signature%20Journey." target="_blank" class="request-btn">Send a Message</a>
+                </div>
+                
+                <div class="request-option">
+                    <i class="fas fa-comment"></i>
+                    <h3>Text Message</h3>
+                    <p>Send a text message directly to Jessica for quick communication.</p>
+                    <p class="contact-detail">+1 646 229 8158</p>
+                    <a href="sms:+16462298158?body=Hello!%20I'd%20like%20to%20request%20my%20spot%20for%20the%20Signature%20Journey." class="request-btn">Send a Text</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // CONTACT MENU TOGGLE
+        let contactMenuOpen = false;
+        function toggleContactMenu() {
+            const menu = document.getElementById('contact-menu');
+            menu.classList.toggle('active');
+            contactMenuOpen = !contactMenuOpen;
+        }
+        document.addEventListener('click', function(event) {
+            const menu = document.getElementById('contact-menu');
+            if (menu && !menu.contains(event.target) && contactMenuOpen) {
+                toggleContactMenu();
+            }
+        });
+
+        // CAROUSEL FUNCTIONALITY
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function moveCarousel(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let slides = document.getElementsByClassName("carousel-slide");
+            let dots = document.getElementsByClassName("dot");
+            
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].classList.remove("active");
+            }
+            for (let i = 0; i < dots.length; i++) {
+                dots[i].classList.remove("active");
+            }
+            
+            slides[slideIndex - 1].classList.add("active");
+            dots[slideIndex - 1].classList.add("active");
+        }
+
+        // Auto-advance carousel every 5 seconds
+        setInterval(() => {
+            moveCarousel(1);
+        }, 5000);
+
+        // REQUEST MODAL FUNCTIONS
+        function openRequestModal() {
+            document.getElementById('requestModal').style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeRequestModal() {
+            document.getElementById('requestModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+        
+        window.onclick = function(event) {
+            const modal = document.getElementById('requestModal');
+            if (event.target == modal) {
+                closeRequestModal();
+            }
+        }
+    </script>
+</body>
+
+</html>
