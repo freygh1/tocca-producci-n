@@ -52,6 +52,11 @@
 
 <body>
 
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" title="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
     <div id="contact-menu" class="contact-menu">
         <button class="contact-toggle" onclick="toggleContactMenu()">
             <i class="fas fa-envelope"></i>
@@ -67,6 +72,10 @@
                 target="_blank" class="contact-option" title="WhatsApp">
                 <i class="fab fa-whatsapp"></i>
                 <span>WhatsApp</span>
+            </a>
+            <a href="sms:+16462298158?body=Hello!%20I'd%20like%20more%20information%20about%20Tocca." class="contact-option" title="Message">
+                <i class="fas fa-comment"></i>
+                <span>Message</span>
             </a>
             <a href="tel:+16462298158" class="contact-option" title="Call Us">
                 <i class="fas fa-phone"></i>
@@ -229,8 +238,7 @@
                         class="journey-card-image">
                     <div class="journey-card-content">
                         <h3>Signature Journey</h3>
-                        <p class="journey-subtitle-card">For those who want to simply arrive and be embraced by the
-                            Coast.</p>
+                        <p class="journey-subtitle-card"> An immersive journey through the true essence of the Amalfi Coast.</p>
 
                         <ul class="journey-features">
                             <li><i class="fas fa-sun"></i> 10 days of curated experiences</li>
@@ -249,7 +257,7 @@
                     <img src="imagenes/views.jpg" alt="Bespoke Journey - Amalfi Coast" class="journey-card-image">
                     <div class="journey-card-content">
                         <h3>Bespoke Journey</h3>
-                        <p class="journey-subtitle-card">For the dreamers who wish to craft their own Italian story</p>
+                        <p class="journey-subtitle-card"> A thoughtful journey that transforms your desires into a tailor-made Italian escape</p>
 
                         <ul class="journey-features">
                             <li><i class="fas fa-magic"></i> Fully personalized itinerary</li>
@@ -664,6 +672,43 @@ Special Requests: ${formData.get('specialRequests')}
     <script src="script.js"></script>
 
     <script>
+        // HAMBURGER MENU
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.querySelector(".hamburger");
+            const navMenu = document.querySelector(".nav-menu");
+            const navLinks = document.querySelectorAll(".nav-link");
+            
+            if (hamburger && navMenu) {
+                hamburger.addEventListener("click", function(e) {
+                    e.preventDefault();
+                    hamburger.classList.toggle("active");
+                    navMenu.classList.toggle("active");
+                    document.body.classList.toggle("no-scroll");
+                });
+
+                // Cerrar el menú al hacer clic en un enlace
+                navLinks.forEach(function(link) {
+                    link.addEventListener("click", function() {
+                        hamburger.classList.remove("active");
+                        navMenu.classList.remove("active");
+                        document.body.classList.remove("no-scroll");
+                    });
+                });
+
+                // Cerrar el menú al hacer clic fuera de él
+                document.addEventListener("click", function(e) {
+                    const isClickInsideMenu = navMenu.contains(e.target);
+                    const isClickOnHamburger = hamburger.contains(e.target);
+                    
+                    if (!isClickInsideMenu && !isClickOnHamburger && navMenu.classList.contains('active')) {
+                        hamburger.classList.remove("active");
+                        navMenu.classList.remove("active");
+                        document.body.classList.remove("no-scroll");
+                    }
+                });
+            }
+        });
+        
         // Initialize carousel after everything loads
         $(document).ready(function () {
             // Wait a bit for images to load
@@ -692,6 +737,24 @@ Special Requests: ${formData.get('specialRequests')}
                 }
             }, 500);
         });
+
+        // BACK TO TOP BUTTON
+        const backToTopBtn = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.add('show');
+            } else {
+                backToTopBtn.classList.remove('show');
+            }
+        });
+        
+        backToTopBtn.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
     </script>
 
     <!-- REQUEST SPOT MODAL -->
@@ -704,7 +767,6 @@ Special Requests: ${formData.get('specialRequests')}
                 <div class="request-option">
                     <i class="fas fa-envelope"></i>
                     <h3>Email Jessica</h3>
-                    <p>Perfect for detailed questions, special requests, or sharing your travel plans.</p>
                     <p class="contact-detail">info@toccaamalfi.com</p>
                     <a href="mailto:info@toccaamalfi.com?subject=More%20information%20-%20Tocca"
                         class="request-btn">Send an Email</a>
@@ -712,17 +774,15 @@ Special Requests: ${formData.get('specialRequests')}
 
                 <div class="request-option">
                     <i class="fas fa-phone"></i>
-                    <h3>Request a Call</h3>
-                    <p>Ideal if you'd like to talk through the journey or design something more custom.</p>
-                    <p class="contact-detail">Jessica will follow up to confirm a time.</p>
+                    <h3>Call Jessica</h3>
+                    <p class="contact-detail">+1 646 229 8158</p>
                     <a href="tel:+16462298158"
-                        class="request-btn">Schedule a Call</a>
+                        class="request-btn">Call Now</a>
                 </div>
 
                 <div class="request-option">
                     <i class="fab fa-whatsapp"></i>
                     <h3>WhatsApp</h3>
-                    <p>Perfect for quick questions or real-time availability.</p>
                     <p class="contact-detail">+1 646 229 8158</p>
                     <a href="https://wa.me/16462298158?text=Hello!%20I%27d%20like%20more%20information%20about%20Tocca."
                         target="_blank" class="request-btn">Send a Message</a>
@@ -731,7 +791,6 @@ Special Requests: ${formData.get('specialRequests')}
                 <div class="request-option">
                     <i class="fas fa-comment"></i>
                     <h3>Text Message</h3>
-                    <p>Send a text message directly to Jessica for quick communication.</p>
                     <p class="contact-detail">+1 646 229 8158</p>
                     <a href="sms:+16462298158?body=Hello!%20I%27d%20like%20more%20information%20about%20Tocca."
                         class="request-btn">Send a Text</a>

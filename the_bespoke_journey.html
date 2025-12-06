@@ -41,6 +41,11 @@
 
 <body>
 
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" title="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
     <a href="index.html#hero" class="home-button" title="Back to Home">
         <i class="fas fa-home"></i>
         <span class="home-text">Home</span>
@@ -88,20 +93,20 @@
     </header>
 
     <main>
-        <!-- HERO SECTION - Estilo Maqueta 2 -->
-        <section class="bespoke-hero">
-            <div class="bespoke-hero-image">
-                <img src="imagenes/views.jpg" alt="Amalfi Coast dramatic view">
-            </div>
-            <div class="bespoke-hero-content">
+        <!-- HERO SECTION - Two Column Layout -->
+        <section class="signature-hero">
+            <div class="signature-hero-content">
                 <a href="index.html#hero" class="back-home-link"><i class="fas fa-arrow-left"></i> Back to Home</a>
                 <h1>The Bespoke Experience</h1>
-                <p class="bespoke-subtitle">Inspired by You</p>
-                <p class="bespoke-description">Tailored to your passions, pace, and availability — each encounter is created around what moves you most. Whether for a single afternoon, a weekend escape, or an extended journey</p>
-                <div class="bespoke-hero-cta">
-                    <a href="mailto:info@toccaamalfi.com?subject=More%20information%20-%20Bespoke%20Journey" class="btn-primary-large">Start Your Journey →</a>
+                <p class="signature-subtitle">Inspired by You</p>
+                <p class="signature-description">Tailored to your passions, pace, and availability — each encounter is created around what moves you most.</p>
+                <div class="signature-hero-cta">
+                    <a href="#" class="btn-primary-large" onclick="openRequestModal(); return false;">Start Your Journey →</a>
                     <a href="#bespoke-inspired" class="btn-secondary-large">Learn More →</a>
                 </div>
+            </div>
+            <div class="signature-hero-image">
+                <img src="imagenes/views.jpg" alt="Amalfi Coast dramatic view">
             </div>
         </section>
 
@@ -181,7 +186,7 @@
         <section class="bespoke-possible-section">
             <div class="signature-container">
                 <h2>What's Possible with a Bespoke Journey?</h2>
-                <p class="bespoke-possible-intro">Anything you can imagine. Here are just a few ideas:</p>
+                <p class="bespoke-possible-intro">These are sample experiences; your Bespoke Journey is customized entirely to you.</p>
                 
                 <div class="bespoke-grid">
                     <div class="bespoke-card">
@@ -311,17 +316,7 @@
             </div>
         </section>
 
-        <!-- FINAL INSPIRATION -->
-        <section class="signature-final-cta">
-            <div class="signature-container">
-                <h2>Let the Amalfi Coast awaken your senses</h2>
-                <p class="final-cta-poetic">The scent of lemons, the warmth of the sun, the sound of waves against ancient cliffs.<br>Come as a traveler. Leave as part of the coast.</p>
-                <p class="final-cta-tagline"><strong>Tocca Amalfi</strong><br><em>Touch the Soul of the Coast.</em></p>
-                <div class="final-cta-buttons">
-                    <a href="#" class="btn-primary-xl" onclick="openRequestModal(); return false;">Start Planning →</a>
-                </div>
-            </div>
-        </section>
+
 
     </main>
 
@@ -367,8 +362,42 @@
         </div>
     </div>
 
-    <script src="script.js"></script>
     <script>
+        // HAMBURGER MENU
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.querySelector(".hamburger");
+            const navMenu = document.querySelector(".nav-menu");
+            const navLinks = document.querySelectorAll(".nav-link");
+            
+            if (hamburger && navMenu) {
+                hamburger.addEventListener("click", function(e) {
+                    e.preventDefault();
+                    hamburger.classList.toggle("active");
+                    navMenu.classList.toggle("active");
+                    document.body.classList.toggle("no-scroll");
+                });
+
+                navLinks.forEach(function(link) {
+                    link.addEventListener("click", function() {
+                        hamburger.classList.remove("active");
+                        navMenu.classList.remove("active");
+                        document.body.classList.remove("no-scroll");
+                    });
+                });
+
+                document.addEventListener("click", function(e) {
+                    const isClickInsideMenu = navMenu.contains(e.target);
+                    const isClickOnHamburger = hamburger.contains(e.target);
+                    
+                    if (!isClickInsideMenu && !isClickOnHamburger && navMenu.classList.contains('active')) {
+                        hamburger.classList.remove("active");
+                        navMenu.classList.remove("active");
+                        document.body.classList.remove("no-scroll");
+                    }
+                });
+            }
+        });
+
         // REQUEST MODAL FUNCTIONS
         function openRequestModal() {
             document.getElementById('requestModal').style.display = 'block';
@@ -435,6 +464,24 @@
         setInterval(() => {
             moveBespokeCarousel(1);
         }, 5000);
+
+        // BACK TO TOP BUTTON
+        const backToTopBtn = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.add('show');
+            } else {
+                backToTopBtn.classList.remove('show');
+            }
+        });
+        
+        backToTopBtn.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
     </script>
 </body>
 
