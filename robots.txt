@@ -1,0 +1,20 @@
+# robots.txt for Tocca Amalfi Coast
+# https://www.toccaamalfi.com/robots.txt
+
+User-agent: *
+Allow: /
+Disallow: /tocca/
+
+# Sitemaps
+Sitemap: https://www.toccaamalfi.com/sitemap.xml
+
+# Specific bot instructions
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /imagenes/
+Allow: /imagenesparapaginas/
+
+# Crawl delay for respectful crawling
+Crawl-delay: 1

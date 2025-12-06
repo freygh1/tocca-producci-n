@@ -1,0 +1,61 @@
+{
+  "name": "Tocca Amalfi Coast - SEO Checklist",
+  "version": "1.0",
+  "date": "2025-12-05",
+  "optimizations": {
+    "completed": [
+      "Meta tags (title, description, keywords)",
+      "Open Graph tags para Facebook",
+      "Twitter Cards",
+      "Schema.org structured data (JSON-LD)",
+      "Canonical URLs",
+      "Robots.txt creado",
+      "Sitemap.xml creado",
+      ".htaccess optimizado",
+      "Alt tags en imágenes principales",
+      "H1 tags optimizados con keywords",
+      "Geo tags para búsqueda local"
+    ],
+    "pending": [
+      "Verificar Google Search Console",
+      "Crear Google My Business",
+      "Instalar Google Analytics",
+      "Comprimir todas las imágenes",
+      "Crear backlinks",
+      "Registrar en directorios de turismo",
+      "Crear contenido de blog",
+      "Obtener primeras reseñas",
+      "Configurar redes sociales",
+      "Implementar estrategia de contenido"
+    ]
+  },
+  "keywords": {
+    "primary": [
+      "Tocca Amalfi",
+      "Tocca Amalfi Coast",
+      "Tocca Amalfi Coast Tours"
+    ],
+    "secondary": [
+      "Luxury Amalfi Coast Tours",
+      "Bespoke Amalfi Travel",
+      "Private Amalfi Tours",
+      "Amalfi Coast Experiences",
+      "Authentic Amalfi Tours"
+    ]
+  },
+  "monitoring": {
+    "tools": [
+      "Google Search Console",
+      "Google Analytics",
+      "Google PageSpeed Insights",
+      "GTmetrix"
+    ],
+    "kpis": [
+      "Position for 'tocca amalfi'",
+      "Organic traffic",
+      "Conversion rate",
+      "Page load speed",
+      "Bounce rate"
+    ]
+  }
+}
