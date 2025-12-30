@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+
+    <!-- Primary Meta Tags -->
+    <title>Bespoke Journey - Tocca Amalfi Coast | Custom Luxury Amalfi Coast Trips</title>
+    <meta name="title" content="Bespoke Journey - Tocca Amalfi Coast | Custom Luxury Amalfi Coast Trips">
+    <meta name="description" content="Design your perfect Amalfi Coast experience with Tocca's Bespoke Journey. Fully customized private trips tailored to your dreams. Explore Positano, Ravello, Capri, and hidden gems with expert guidance.">
+    <meta name="keywords" content="Tocca Amalfi Bespoke, custom Amalfi trips, private Amalfi Coast trips, bespoke Italy travel, personalized Amalfi experience, luxury private trips, custom Italian vacation, Tocca Amalfi private journey">
+    <meta name="author" content="Tocca Amalfi Coast">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.toccaamalfi.com/the_bespoke_journey.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.toccaamalfi.com/the_bespoke_journey.html">
+    <meta property="og:title" content="Bespoke Journey - Tocca Amalfi Coast | Custom Luxury Trips">
+    <meta property="og:description" content="Create your dream Amalfi Coast experience with Tocca's fully customized Bespoke Journey. Private, personalized, unforgettable.">
+    <meta property="og:image" content="https://www.toccaamalfi.com/imagenes/tocca_amalfi_nav.png">
+    <meta property="og:site_name" content="Tocca Amalfi Coast">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.toccaamalfi.com/the_bespoke_journey.html">
+    <meta property="twitter:title" content="Bespoke Journey - Tocca Amalfi Coast">
+    <meta property="twitter:description" content="Design your perfect custom Amalfi Coast trip with Tocca.">
+    <meta property="twitter:image" content="https://www.toccaamalfi.com/imagenes/tocca_amalfi_nav.png">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="style.css?v=20251221" as="style">
+    <link rel="preload" href="imagenes/views.jpg" as="image">
+    <link rel="preload" href="imagenes/tocca_amalfi_nav.png" as="image">
+    
+    <link rel="stylesheet" href="style.css?v=20251221">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;700&family=Playfair+Display:wght@400;700&family=Style+Script&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"></noscript>
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+</head>
+
+<body>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" title="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <a href="index.html#hero" class="home-button" title="Back to Home">
+        <i class="fas fa-home"></i>
+        <span class="home-text">Home</span>
+    </a>
+
+    <a href="the_signature_journey.html" class="signature-journey-badge" title="View the Signature Journey">
+        <i class="fas fa-route"></i>
+        <span class="badge-text">View the Signature Journey</span>
+    </a>
+
+    <div id="contact-menu" class="contact-menu">
+        <button class="contact-toggle" onclick="toggleContactMenu()">
+            <i class="fas fa-envelope"></i>
+            <span class="contact-text">Contact Us</span>
+        </button>
+        <div class="contact-options">
+            <a href="mailto:info@toccaamalfi.com?subject=More%20information%20-%20Bespoke%20Journey" class="contact-option" title="Email Us">
+                <i class="fas fa-envelope"></i>
+                <span>Email</span>
+            </a>
+            <a href="https://wa.me/16462298158?text=Hello!%20I'd%20like%20to%20know%20more%20about%20the%20trips." target="_blank" class="contact-option" title="WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+                <span>WhatsApp</span>
+            </a>
+            <a href="sms:+16462298158?body=Hello!%20I'd%20like%20more%20information%20about%20the%20Bespoke%20Journey." class="contact-option" title="Text">
+                <i class="fas fa-comment"></i>
+                <span>Text</span>
+            </a>
+            <a href="tel:+16462298158" class="contact-option" title="Call Us">
+                <i class="fas fa-phone"></i>
+                <span>Call</span>
+            </a>
+        </div>
+    </div>
+
+    <header class="main-header">
+        <nav class="navbar">
+            <a href="index.html#hero" class="nav-logo-container">
+                <img src="imagenes/tocca_amalfi_nav.png" alt="Tocca Amalfi Logo" class="nav-logo">
+            </a>
+            <div class="nav-menu">
+                <a href="#bespoke-how-it-works" class="nav-link">How It Works</a>
+                <a href="#bespoke-whats-possible" class="nav-link">What's Possible</a>
+                <a href="#bespoke-who-for" class="nav-link">Who Is it for</a>
+                <a href="https://www.instagram.com/reel/DSJMtSyEf_i/" target="_blank" class="nav-link" style="border: 2px solid #8b6a47; padding: 8px 16px; border-radius: 4px;">Meet the Founder & Host</a>
+                <a href="faq.html" class="nav-link">FAQ</a>
+                <a href="#" class="nav-link" onclick="openRequestModal(); return false;">Contact Us</a>
+            </div>
+            <button class="hamburger" aria-label="Open menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- HERO SECTION - Two Column Layout -->
+        <section class="signature-hero">
+            <div class="signature-hero-content">
+                <a href="index.html#hero" class="back-home-link"><i class="fas fa-arrow-left"></i> Back to Home</a>
+                <h1>The Bespoke Experience</h1>
+                <p class="signature-subtitle">Inspired by You</p>
+                <p class="signature-description">Tailored to your passions, pace, and availability each encounter is created around what moves you most.</p>
+                <div class="signature-hero-cta">
+                    <a href="#" class="btn-primary-large" onclick="openRequestModal(); return false;">Start Your Journey →</a>
+                    <a href="#bespoke-inspired" class="btn-secondary-large">Learn More →</a>
+                </div>
+            </div>
+            <div class="signature-hero-image">
+                <img src="imagenes/views.jpg" alt="Amalfi Coast dramatic view">
+            </div>
+        </section>
+
+        <!-- INTRO SECTION -->
+        <section id="bespoke-intro" class="bespoke-intro-section">
+            <div class="signature-container bespoke-intro-wrapper">
+                <div class="bespoke-intro-text">
+                    <h2>The Bespoke Experience - Inspired by You</h2>
+                    
+                    <p>Bespoke Amalfi Coast Experience transforms your desires into a tailor-made Italian escape.</p>
+                    
+                    <p>We begin with what inspires you food, wellness, the sea, culture, luxury, or quiet discovery and weave it into a seamless experience designed entirely around you. Whatever you wish to emphasize, we'll bring it to life with the same artistry, warmth, and attention to detail as our Signature Journey.</p>
+                </div>
+
+                <div class="signature-why-carousel">
+                    <div class="carousel-container">
+                        <div class="carousel-slide active">
+                            <img src="imagenesparapaginas/carrouselbespoke1.jpeg" alt="Amalfi Coast hillside home" loading="lazy">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="imagenesparapaginas/carrouselbespoke2.jpeg" alt="Coastal bridge and tunnel" loading="lazy">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="imagenesparapaginas/carrouselbespoke3.jpeg" alt="Faraglioni rocks Capri" loading="lazy">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="imagenesparapaginas/carrouselbespoke4.jpeg" alt="Kayaking Amalfi Coast" loading="lazy">
+                        </div>
+                    </div>
+                    <button class="carousel-btn prev" onclick="moveBespokeCarousel(-1)">&#10094;</button>
+                    <button class="carousel-btn next" onclick="moveBespokeCarousel(1)">&#10095;</button>
+                    <div class="carousel-dots">
+                        <span class="dot active" onclick="currentBespokeSlide(1)"></span>
+                        <span class="dot" onclick="currentBespokeSlide(2)"></span>
+                        <span class="dot" onclick="currentBespokeSlide(3)"></span>
+                        <span class="dot" onclick="currentBespokeSlide(4)"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- HOW IT WORKS -->
+        <section id="bespoke-how-it-works" class="bespoke-how-section">
+            <div class="signature-container">
+                <h2><i class="fas fa-pencil-alt"></i> How It Works</h2>
+                
+                <div class="bespoke-steps">
+                    <div class="bespoke-step">
+                        <div class="step-number">1</div>
+                        <h3>Tell Us Your Vision</h3>
+                        <p>We start with a Discovery Call where we learn about you: your passions, preferences, must-sees, and dream experiences.</p>
+                        <a href="mailto:info@toccaamalfi.com?subject=More%20information%20-%20Bespoke%20Journey" class="step-cta">Contact Us →</a>
+                    </div>
+                    
+                    <div class="bespoke-step">
+                        <div class="step-number">2</div>
+                        <h3>We Design Your Journey</h3>
+                        <p>Our team crafts a custom itinerary tailored to your vision complete with exclusive experiences, private guides, and hidden gems.</p>
+                    </div>
+                    
+                    <div class="bespoke-step">
+                        <div class="step-number">3</div>
+                        <h3>Refine & Perfect</h3>
+                        <p>We work together to adjust every detail until your journey feels exactly right.</p>
+                    </div>
+                    
+                    <div class="bespoke-step">
+                        <div class="step-number">4</div>
+                        <h3>Live Your Story</h3>
+                        <p>Arrive, relax, and experience the Coast your way with our team ensuring every moment is seamless.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WHAT'S POSSIBLE -->
+        <section id="bespoke-whats-possible" class="bespoke-possible-section">
+            <div class="signature-container">
+                <h2>What's Possible with a Bespoke Journey?</h2>
+                <p class="bespoke-possible-intro">These are sample experiences; your Bespoke Journey is customized entirely to you.</p>
+                
+                <div class="bespoke-grid">
+                    <div class="bespoke-card">
+                        <img src="imagenesparapaginas/CulinaryImmersion.jpeg" alt="Culinary experiences" loading="lazy">
+                        <div class="bespoke-card-content">
+                            <h3><i class="fas fa-utensils"></i> Culinary Immersion</h3>
+                            <p>Private cooking classes with Michelin chefs, wine tastings in hidden cellars, farm-to-table dinners under the stars.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bespoke-card">
+                        <img src="imagenesparapaginas/withbespokejourneyseaandadventure.jpeg" alt="Private boat trips" loading="lazy">
+                        <div class="bespoke-card-content">
+                            <h3><i class="fas fa-ship"></i> Sea & Adventure</h3>
+                            <p>Private yacht charters, sunset sailing, snorkeling in hidden coves, or a day exploring Capri by boat.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bespoke-card">
+                        <img src="imagenesparapaginas/luxurystays.jpeg" alt="Luxury accommodations" loading="lazy">
+                        <div class="bespoke-card-content">
+                            <h3><i class="fas fa-hotel"></i> Luxury Stays</h3>
+                            <p>Boutique hotels, historic villas, or cliffside suites we select accommodations that match your style.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bespoke-card">
+                        <img src="imagenesparapaginas/Artandculture.jpeg" alt="Cultural experiences" loading="lazy">
+                        <div class="bespoke-card-content">
+                            <h3><i class="fas fa-landmark"></i> Art & Culture</h3>
+                            <p>Private trips to Pompeii, ceramics workshops in Vietri, visits to local artists' studios, opera nights in historic theaters.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bespoke-card">
+                        <img src="imagenesparapaginas/adventureandmovement.jpeg" alt="Vespa trips" loading="lazy">
+                        <div class="bespoke-card-content">
+                            <h3><i class="fas fa-motorcycle"></i> Adventure & Movement</h3>
+                            <p>Vespa trips along the coast, hiking the Path of the Gods, mountain biking in Tramonti, yoga by the sea.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bespoke-card">
+                        <img src="imagenesparapaginas/autenticconection.jpeg" alt="Local experiences" loading="lazy">
+                        <div class="bespoke-card-content">
+                            <h3><i class="fas fa-lemon"></i> Authentic Connections</h3>
+                            <p>Meet local producers, visit lemon groves, learn traditional crafts, dine in family homes.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bespoke-card">
+                        <img src="imagenesparapaginas/wellness and sport is.jpeg" alt="Wellness and spirituality experiences" loading="lazy">
+                        <div class="bespoke-card-content">
+                            <h3><i class="fas fa-spa"></i> Wellness & Spirituality</h3>
+                            <p>Restore your mind and body with seaside yoga, soothing spa rituals, sound healing, and peaceful visits to sacred spaces.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bespoke-card">
+                        <img src="imagenesparapaginas/romantic.jpeg" alt="Romantic experiences" loading="lazy">
+                        <div class="bespoke-card-content">
+                            <h3><i class="fas fa-heart"></i> Romance & Special Moments</h3>
+                            <p>Celebrate love with private sunset dinners, secret picnics, proposals, vow renewals, and beautifully curated milestone moments.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <p class="bespoke-closing-note" style="text-align: center; font-style: italic; color: #5a5a5a; margin-top: 40px; font-size: 1.1rem;">These are just a few possibilities. Your Bespoke Journey is entirely yours to imagine.</p>
+            </div>
+        </section>
+
+        <!-- WHO IS THIS FOR -->
+        <section id="bespoke-who-for" class="bespoke-for-section">
+            <div class="signature-container">
+                <h2>Who Is the Bespoke Journey For?</h2>
+                <p class="bespoke-for-intro">Your bespoke journey is molded around the people you travel with. From intimate escapes to spirited celebrations, we choreograph every detail to match the way you love to explore.</p>
+
+                <div class="bespoke-for-grid">
+                    <div class="bespoke-for-item">
+                        <span class="bespoke-for-tag">Romance Curated</span>
+                        <i class="fas fa-heart"></i>
+                        <h3>Couples seeking romance</h3>
+                        <p>Celebrate an anniversary, honeymoon, or simply being together with experiences designed for two.</p>
+                        <ul class="bespoke-for-highlights">
+                            <li>Private sunset cruises and aperitivos</li>
+                            <li>Secret garden dinners with live mandolin</li>
+                        </ul>
+                    </div>
+
+                    <div class="bespoke-for-item">
+                        <span class="bespoke-for-tag">Flexible &amp; Fun</span>
+                        <i class="fas fa-users"></i>
+                        <h3>Families wanting flexibility</h3>
+                        <p>Create memories at your own pace with activities that delight every generation.</p>
+                        <ul class="bespoke-for-highlights">
+                            <li>Kid-approved adventures paired with downtime</li>
+                            <li>Private drivers and guides tuned to your rhythm</li>
+                        </ul>
+                    </div>
+
+                    <div class="bespoke-for-item">
+                        <span class="bespoke-for-tag">Personal Discovery</span>
+                        <i class="fas fa-user"></i>
+                        <h3>Solo travelers</h3>
+                        <p>Experience the Coast on your terms, with personalized guidance and meaningful connections.</p>
+                        <ul class="bespoke-for-highlights">
+                            <li>Hosts who balance private time with curated company</li>
+                            <li>Wellness rituals, tastings, and ateliers tailored to you</li>
+                        </ul>
+                    </div>
+
+                    <div class="bespoke-for-item">
+                        <span class="bespoke-for-tag">Shared Moments</span>
+                        <i class="fas fa-glass-cheers"></i>
+                        <h3>Groups of friends</h3>
+                        <p>Design the ultimate getaway together from wine trips to beach days to culinary adventures.</p>
+                        <ul class="bespoke-for-highlights">
+                            <li>Private boat days with onboard chefs and DJs</li>
+                            <li>Hands-on culinary nights and vineyard celebrations</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DISCOVERY CALL CTA -->
+        <section class="bespoke-cta-section">
+            <div class="signature-container">
+                <h2>Let's Create Your Story</h2>
+                <p>Every Bespoke Journey begins with a conversation. Tell us your vision, and we'll bring it to life.</p>
+                
+                <div class="signature-cta-buttons">
+                    <a href="#" class="btn-primary-xl" onclick="openRequestModal(); return false;">Schedule a Discovery Call →</a>
+                    <a href="#" class="btn-secondary-xl" onclick="openRequestModal(); return false;">Contact Us →</a>
+                </div>
+                
+                <!-- Bespoke Stamp -->
+                <div class="bespoke-stamp-overlay">
+                    <div class="bespoke-stamp-content">
+                        <p>Your journey, your way crafted with care.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+    </main>
+
+    <!-- REQUEST SPOT MODAL -->
+    <div id="requestModal" class="request-modal">
+        <div class="request-modal-content">
+            <span class="request-modal-close" onclick="closeRequestModal()">&times;</span>
+            <h2></h2>
+            
+            <div class="request-contact-options">
+                <div class="request-option">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email Jessica</h3>
+                    <a href="mailto:info@toccaamalfi.com?subject=More%20information%20-%20Bespoke%20Journey" class="request-btn">Send an Email</a>
+                </div>
+                
+                <div class="request-option">
+                    <i class="fas fa-phone"></i>
+                    <h3>Request a Call</h3>
+                    <a href="tel:+16462298158" class="request-btn">Schedule a Call</a>
+                </div>
+                
+                <div class="request-option">
+                    <i class="fab fa-whatsapp"></i>
+                    <h3>WhatsApp</h3>
+                    <a href="https://wa.me/16462298158?text=Hello!%20I'd%20like%20to%20inquire%20about%20the%20Bespoke%20Journey." target="_blank" class="request-btn">Send a Message</a>
+                </div>
+                
+                <div class="request-option">
+                    <i class="fas fa-comment"></i>
+                    <h3>Text Message</h3>
+                    <a href="sms:+16462298158?body=Hello!%20I'd%20like%20to%20inquire%20about%20the%20Bespoke%20Journey." class="request-btn">Send a Text</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // HAMBURGER MENU
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.querySelector(".hamburger");
+            const navMenu = document.querySelector(".nav-menu");
+            const navLinks = document.querySelectorAll(".nav-link");
+            
+            if (hamburger && navMenu) {
+                hamburger.addEventListener("click", function(e) {
+                    e.preventDefault();
+                    hamburger.classList.toggle("active");
+                    navMenu.classList.toggle("active");
+                    document.body.classList.toggle("no-scroll");
+                });
+
+                navLinks.forEach(function(link) {
+                    link.addEventListener("click", function() {
+                        hamburger.classList.remove("active");
+                        navMenu.classList.remove("active");
+                        document.body.classList.remove("no-scroll");
+                    });
+                });
+
+                document.addEventListener("click", function(e) {
+                    const isClickInsideMenu = navMenu.contains(e.target);
+                    const isClickOnHamburger = hamburger.contains(e.target);
+                    
+                    if (!isClickInsideMenu && !isClickOnHamburger && navMenu.classList.contains('active')) {
+                        hamburger.classList.remove("active");
+                        navMenu.classList.remove("active");
+                        document.body.classList.remove("no-scroll");
+                    }
+                });
+            }
+        });
+
+        // REQUEST MODAL FUNCTIONS
+        function openRequestModal() {
+            document.getElementById('requestModal').style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeRequestModal() {
+            document.getElementById('requestModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+        
+        window.onclick = function(event) {
+            const modal = document.getElementById('requestModal');
+            if (event.target == modal) {
+                closeRequestModal();
+            }
+        }
+
+        // CONTACT MENU TOGGLE
+        let contactMenuOpen = false;
+        function toggleContactMenu() {
+            const menu = document.getElementById('contact-menu');
+            menu.classList.toggle('active');
+            contactMenuOpen = !contactMenuOpen;
+        }
+        document.addEventListener('click', function(event) {
+            const menu = document.getElementById('contact-menu');
+            if (menu && !menu.contains(event.target) && contactMenuOpen) {
+                toggleContactMenu();
+            }
+        });
+
+        // BESPOKE CAROUSEL FUNCTIONALITY
+        let bespokeSlideIndex = 1;
+        showBespokeSlides(bespokeSlideIndex);
+
+        function moveBespokeCarousel(n) {
+            showBespokeSlides(bespokeSlideIndex += n);
+        }
+
+        function currentBespokeSlide(n) {
+            showBespokeSlides(bespokeSlideIndex = n);
+        }
+
+        function showBespokeSlides(n) {
+            let slides = document.querySelectorAll('.bespoke-intro-section .carousel-slide');
+            let dots = document.querySelectorAll('.bespoke-intro-section .dot');
+            
+            if (n > slides.length) { bespokeSlideIndex = 1 }
+            if (n < 1) { bespokeSlideIndex = slides.length }
+            
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].classList.remove("active");
+            }
+            for (let i = 0; i < dots.length; i++) {
+                dots[i].classList.remove("active");
+            }
+            
+            slides[bespokeSlideIndex - 1].classList.add("active");
+            dots[bespokeSlideIndex - 1].classList.add("active");
+        }
+
+        // Auto-advance bespoke carousel every 5 seconds
+        setInterval(() => {
+            moveBespokeCarousel(1);
+        }, 5000);
+
+        // BACK TO TOP BUTTON
+        const backToTopBtn = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.add('show');
+            } else {
+                backToTopBtn.classList.remove('show');
+            }
+        });
+        
+        backToTopBtn.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+
+</html>

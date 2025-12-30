@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo - Sistema de Traducción Tocca Amalfi</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 800px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 2.5rem;
+        }
+
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+        }
+
+        .status {
+            background: #10b981;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .status-icon {
+            font-size: 1.5rem;
+        }
+
+        .feature-list {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+
+        .feature-list li {
+            padding: 15px;
+            margin-bottom: 10px;
+            background: #f3f4f6;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .feature-icon {
+            font-size: 1.5rem;
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #8b6a47, #6d5436);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 15px 30px;
+            border: none;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #8b6a47, #6d5436);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(139, 106, 71, 0.3);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: #8b6a47;
+            border: 2px solid #8b6a47;
+        }
+
+        .btn-secondary:hover {
+            background: #8b6a47;
+            color: white;
+        }
+
+        .info-box {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 20px;
+            margin-top: 30px;
+            border-radius: 8px;
+        }
+
+        .info-box h3 {
+            color: #92400e;
+            margin-bottom: 10px;
+        }
+
+        .info-box p {
+            color: #78350f;
+            line-height: 1.6;
+        }
+
+        .code-snippet {
+            background: #1f2937;
+            color: #10b981;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            overflow-x: auto;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .button-group {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>✨ Sistema de Traducción Implementado</h1>
+        <p class="subtitle">Tocca Amalfi Coast - Español/Inglés</p>
+
+        <div class="status">
+            <span class="status-icon">✅</span>
+            <div>
+                <strong>Estado:</strong> Completamente implementado y funcional
+            </div>
+        </div>
+
+        <h2 style="margin-bottom: 20px; color: #333;">🎯 Características Principales</h2>
+        <ul class="feature-list">
+            <li>
+                <div class="feature-icon">🌍</div>
+                <div>
+                    <strong>Detección Automática</strong><br>
+                    Detecta el idioma del navegador al cargar la página
+                </div>
+            </li>
+            <li>
+                <div class="feature-icon">🔘</div>
+                <div>
+                    <strong>Botón de Cambio</strong><br>
+                    Cambia entre español e inglés con un clic
+                </div>
+            </li>
+            <li>
+                <div class="feature-icon">💾</div>
+                <div>
+                    <strong>Persistencia</strong><br>
+                    Guarda la preferencia del usuario en localStorage
+                </div>
+            </li>
+            <li>
+                <div class="feature-icon">📱</div>
+                <div>
+                    <strong>Responsive</strong><br>
+                    Funciona perfectamente en móvil, tablet y escritorio
+                </div>
+            </li>
+            <li>
+                <div class="feature-icon">🔍</div>
+                <div>
+                    <strong>SEO Optimizado</strong><br>
+                    Meta tags dinámicos según el idioma seleccionado
+                </div>
+            </li>
+        </ul>
+
+        <h2 style="margin-bottom: 20px; color: #333;">🚀 Archivos Implementados</h2>
+        <ul class="feature-list">
+            <li>
+                <span style="font-size: 1.5rem;">📄</span>
+                <div>
+                    <strong>translations.js</strong><br>
+                    Sistema completo de traducciones y detección
+                </div>
+            </li>
+            <li>
+                <span style="font-size: 1.5rem;">🎨</span>
+                <div>
+                    <strong>style.css</strong><br>
+                    Estilos para el botón de idioma
+                </div>
+            </li>
+            <li>
+                <span style="font-size: 1.5rem;">🌐</span>
+                <div>
+                    <strong>index.html</strong><br>
+                    Atributos data-i18n en todos los elementos
+                </div>
+            </li>
+        </ul>
+
+        <div class="button-group">
+            <a href="index.html" class="btn btn-primary">🌐 Abrir Página Principal</a>
+            <a href="SISTEMA-TRADUCCION.md" class="btn btn-secondary">📖 Ver Documentación</a>
+        </div>
+
+        <div class="info-box">
+            <h3>💡 Cómo Probar</h3>
+            <p>
+                1. Haz clic en "Abrir Página Principal"<br>
+                2. Busca el botón de idioma en la esquina superior derecha (🇪🇸 ES o 🇺🇸 EN)<br>
+                3. Haz clic para cambiar entre español e inglés<br>
+                4. Recarga la página - tu preferencia se mantiene guardada
+            </p>
+        </div>
+
+        <div class="info-box" style="background: #dbeafe; border-color: #3b82f6; margin-top: 20px;">
+            <h3 style="color: #1e40af;">🔧 Cómo Agregar Nuevas Traducciones</h3>
+            <p style="color: #1e3a8a;">
+                Edita el archivo <code style="background: #fff; padding: 2px 6px; border-radius: 3px;">translations.js</code> 
+                y agrega tu nueva clave en ambos idiomas (en y es).
+            </p>
+            <div class="code-snippet">
+// En translations.js<br>
+en: {<br>
+&nbsp;&nbsp;"mi.nueva.clave": "My New Text"<br>
+},<br>
+es: {<br>
+&nbsp;&nbsp;"mi.nueva.clave": "Mi Nuevo Texto"<br>
+}
+            </div>
+            <p style="color: #1e3a8a; margin-top: 10px;">
+                Luego en HTML: <code style="background: #fff; padding: 2px 6px; border-radius: 3px;">&lt;h2 data-i18n="mi.nueva.clave"&gt;My New Text&lt;/h2&gt;</code>
+            </p>
+        </div>
+
+        <div style="margin-top: 30px; padding-top: 20px; border-top: 2px solid #e5e7eb; text-align: center; color: #666;">
+            <p>✨ Implementado para <strong>Tocca Amalfi Coast</strong></p>
+            <p style="font-size: 0.9rem; margin-top: 5px;">Diciembre 2025</p>
+        </div>
+    </div>
+</body>
+</html>

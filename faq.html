@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Primary Meta Tags -->
-    <title>FAQ - Tocca Amalfi Coast | Frequently Asked Questions About Amalfi Tours</title>
-    <meta name="title" content="FAQ - Tocca Amalfi Coast | Frequently Asked Questions About Amalfi Tours">
-    <meta name="description" content="Get answers to frequently asked questions about Tocca Amalfi Coast luxury tours. Learn about our Signature and Bespoke journeys, pricing, booking, and what to expect on your Amalfi Coast adventure.">
-    <meta name="keywords" content="Tocca Amalfi FAQ, Tocca Amalfi Coast questions, Amalfi Coast tour information, Amalfi tour booking, luxury tour FAQs, Bespoke Journey questions, Signature Journey information">
+    <title>FAQ - Tocca Amalfi Coast | Frequently Asked Questions About Amalfi Trips</title>
+    <meta name="title" content="FAQ - Tocca Amalfi Coast | Frequently Asked Questions About Amalfi Trips">
+    <meta name="description" content="Get answers to frequently asked questions about Tocca Amalfi Coast luxury trips. Learn about our Signature and Bespoke journeys, pricing, booking, and what to expect on your Amalfi Coast adventure.">
+    <meta name="keywords" content="Tocca Amalfi FAQ, Tocca Amalfi Coast questions, Amalfi Coast trip information, Amalfi trip booking, luxury trip FAQs, Bespoke Journey questions, Signature Journey information">
     <meta name="author" content="Tocca Amalfi Coast">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://www.toccaamalfi.com/faq.html">
@@ -18,7 +18,7 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.toccaamalfi.com/faq.html">
     <meta property="og:title" content="FAQ - Tocca Amalfi Coast | Your Questions Answered">
-    <meta property="og:description" content="Everything you need to know about booking your Tocca Amalfi Coast luxury tour experience.">
+    <meta property="og:description" content="Everything you need to know about booking your Tocca Amalfi Coast luxury trip experience.">
     <meta property="og:image" content="https://www.toccaamalfi.com/imagenes/tocca_amalfi_nav.png">
     <meta property="og:site_name" content="Tocca Amalfi Coast">
     
@@ -26,8 +26,12 @@
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://www.toccaamalfi.com/faq.html">
     <meta property="twitter:title" content="FAQ - Tocca Amalfi Coast">
-    <meta property="twitter:description" content="Get answers about Tocca Amalfi Coast luxury tours.">
+    <meta property="twitter:description" content="Get answers about Tocca Amalfi Coast luxury trips.">
     <meta property="twitter:image" content="https://www.toccaamalfi.com/imagenes/tocca_amalfi_nav.png">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="style.css" as="style">
+    <link rel="preload" href="imagenes/tocca_amalfi_nav.png" as="image">
     
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -35,11 +39,20 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;700&family=Playfair+Display:wght@400;700&family=Style+Script&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"></noscript>
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    
+    <!-- Translation System -->
+    <script src="translations.js"></script>
 </head>
 
 <body>
+
+    <!-- Language Toggle Button -->
+    <button id="language-toggle" aria-label="Change language">
+        🇪🇸 <span>ES</span>
+    </button>
 
     <!-- Back to Top Button -->
     <button id="backToTop" class="back-to-top" title="Back to top">
@@ -48,26 +61,26 @@
 
     <a href="index.html#hero" class="home-button" title="Back to Home">
         <i class="fas fa-home"></i>
-        <span class="home-text">Home</span>
+        <span class="home-text" data-i18n="common.home">Home</span>
     </a>
 
     <div id="contact-menu" class="contact-menu">
         <button class="contact-toggle" onclick="toggleContactMenu()">
             <i class="fas fa-envelope"></i>
-            <span class="contact-text">Contact Us</span>
+            <span class="contact-text" data-i18n="contact.text">Contact Us</span>
         </button>
         <div class="contact-options">
             <a href="mailto:info@toccaamalfi.com?subject=FAQ%20question%20-%20Tocca" class="contact-option" title="Email Us">
                 <i class="fas fa-envelope"></i>
-                <span>Email</span>
+                <span data-i18n="contact.email">Email</span>
             </a>
-            <a href="https://wa.me/16462298158?text=Hello!%20I'd%20like%20to%20know%20more%20about%20the%20tours." target="_blank" class="contact-option" title="WhatsApp">
+            <a href="https://wa.me/16462298158?text=Hello!%20I'd%20like%20to%20know%20more%20about%20the%20trips." target="_blank" class="contact-option" title="WhatsApp">
                 <i class="fab fa-whatsapp"></i>
-                <span>WhatsApp</span>
+                <span data-i18n="contact.whatsapp">WhatsApp</span>
             </a>
             <a href="tel:+16462298158" class="contact-option" title="Call Us">
                 <i class="fas fa-phone"></i>
-                <span>Call</span>
+                <span data-i18n="contact.call">Call</span>
             </a>
         </div>
     </div>
@@ -78,10 +91,10 @@
                 <img src="imagenes/tocca_amalfi_nav.png" alt="Tocca Amalfi Logo" class="nav-logo">
             </a>
             <div class="nav-menu">
-                <a href="index.html#why-tocca-amalfi" class="nav-link">Why Choose Us?</a>
-                <a href="index.html#what-we-offer" class="nav-link">What We Offer</a>
-                <a href="index.html#our-experiences" class="nav-link">Our Experiences</a>
-                <a href="#" class="nav-link" onclick="openRequestModal(); return false;">Contact Us</a>
+                <a href="index.html#why-tocca-amalfi" class="nav-link" data-i18n="nav.why">Why Choose Us?</a>
+                <a href="index.html#what-we-offer" class="nav-link" data-i18n="nav.what">What We Offer</a>
+                <a href="index.html#our-experiences" class="nav-link" data-i18n="nav.experiences">Our Experiences</a>
+                <a href="#" class="nav-link" onclick="openRequestModal(); return false;" data-i18n="nav.contact">Contact Us</a>
             </div>
             <button class="hamburger" aria-label="Open menu">
                 <span class="bar"></span>
@@ -95,35 +108,34 @@
         <!-- FAQ HERO -->
         <section class="faq-hero-section">
             <div class="faq-hero-content">
-                <h1>Frequently Asked Questions</h1>
-                <p>Everything you need to know about your Tocca Amalfi Coast experience</p>
+                <h1 data-i18n="faq.hero.title">Frequently Asked Questions</h1>
+                <p data-i18n="faq.hero.desc">Everything you need to know about your Tocca Amalfi Coast experience</p>
             </div>
         </section>
 
         <!-- FAQ CONTENT -->
         <section class="faq-content-section">
             <div class="faq-container">
-                
                 <div class="faq-item">
                     <button class="faq-question" onclick="toggleFAQ(this)">
                         <span class="faq-number">1.</span>
-                        <span class="faq-text">What is Tocca Amalfi Coast?</span>
+                        <span class="faq-text" data-i18n="faq.q1">What is Tocca Amalfi Coast?</span>
                         <i class="fas fa-chevron-down faq-icon"></i>
                     </button>
                     <div class="faq-answer">
-                        <p>Tocca Amalfi Coast is a founder-hosted, small-group and bespoke travel experience on the Amalfi Coast. I personally curate every detail. Every stay, transfer, and experience is curated with care — blending comfort, culture, and exclusive access to local hosts that most travelers never meet. My goal is for you to simply arrive, and live la dolce vita.</p>
+                        <p data-i18n="faq.a1">Tocca Amalfi Coast is a founder-hosted, small-group and bespoke travel experience on the Amalfi Coast. I personally curate every detail. Every stay, transfer, and experience is curated with care — blending comfort, culture, and exclusive access to local hosts that most travelers never meet. My goal is for you to simply arrive, and live la dolce vita.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <button class="faq-question" onclick="toggleFAQ(this)">
                         <span class="faq-number">2.</span>
-                        <span class="faq-text">What's the difference between the Signature Journey and the Bespoke Journey?</span>
+                        <span class="faq-text" data-i18n="faq.q2">What's the difference between the Signature Journey and the Bespoke Journey?</span>
                         <i class="fas fa-chevron-down faq-icon"></i>
                     </button>
                     <div class="faq-answer">
-                        <p><strong>Signature Journey</strong> – A beautifully curated, fixed-date itinerary (10–11 days) for an intimate group of 8–10 travelers. Every detail is pre-planned: premium stays, exclusive local experiences, private transportation, selected meals with wine, and your founder-host with you throughout.</p>
-                        <p><strong>Bespoke Journey</strong> – Fully customized to you. Dates, pace, accommodation, and experiences are tailored to your preferences — perfect for couples, families, solo travelers, or small groups wanting a private, made-to-order experience.</p>
+                        <p data-i18n-html="faq.a2.1"><strong>Signature Journey</strong> – A beautifully curated, fixed-date itinerary (10–11 days) for an intimate group of 8–10 travelers. Every detail is pre-planned: premium stays, exclusive local experiences, private transportation, selected meals with wine, and your founder-host with you throughout.</p>
+                        <p data-i18n-html="faq.a2.2"><strong>Bespoke Journey</strong> – Fully customized to you. Dates, pace, accommodation, and experiences are tailored to your preferences — perfect for couples, families, solo travelers, or small groups wanting a private, made-to-order experience.</p>
                     </div>
                 </div>
 
@@ -159,7 +171,7 @@
                     </button>
                     <div class="faq-answer">
                         <p>The Signature Journey is intentionally intimate, limited to 8–10 guests.</p>
-                        <p>Small groups allow for more flexibility, deeper connection, and a feeling of traveling with friends rather than joining a large tour. It also ensures every experience feels personal and high-touch.</p>
+                        <p>Small groups allow for more flexibility, deeper connection, and a feeling of traveling with friends rather than joining a large trip. It also ensures every experience feels personal and high-touch.</p>
                     </div>
                 </div>
 
@@ -258,9 +270,9 @@
         <!-- FAQ CTA -->
         <section class="faq-cta-section">
             <div class="faq-cta-content">
-                <h2>Still have questions?</h2>
-                <p>I'm here to help. Let's connect and talk through everything you'd like to know.</p>
-                <a href="#" class="cta-button" onclick="openRequestModal(); return false;">Let's Talk →</a>
+                <h2 data-i18n="faq.cta.title">Still have questions?</h2>
+                <p data-i18n="faq.cta.desc">I'm here to help. Let's connect and talk through everything you'd like to know.</p>
+                <a href="#" class="cta-button" onclick="openRequestModal(); return false;" data-i18n="faq.cta.btn">Let's Talk →</a>
             </div>
         </section>
 
@@ -313,38 +325,30 @@
     <div id="requestModal" class="request-modal">
         <div class="request-modal-content">
             <span class="request-modal-close" onclick="closeRequestModal()">&times;</span>
-            <h2>Let's Connect</h2>
+            <h2></h2>
             
             <div class="request-contact-options">
                 <div class="request-option">
                     <i class="fas fa-envelope"></i>
                     <h3>Email Jessica</h3>
-                    <p>Perfect for detailed questions, special requests, or sharing your travel plans.</p>
-                    <p class="contact-detail">info@toccaamalfi.com</p>
                     <a href="mailto:info@toccaamalfi.com?subject=FAQ%20Inquiry%20-%20Tocca%20Amalfi%20Coast" class="request-btn">Send an Email</a>
                 </div>
                 
                 <div class="request-option">
                     <i class="fas fa-phone"></i>
                     <h3>Request a Call</h3>
-                    <p>Ideal if you'd like to talk through the journey or design something more custom.</p>
-                    <p class="contact-detail">Jessica will follow up to confirm a time.</p>
                     <a href="tel:+16462298158" class="request-btn">Schedule a Call</a>
                 </div>
                 
                 <div class="request-option">
                     <i class="fab fa-whatsapp"></i>
                     <h3>WhatsApp</h3>
-                    <p>Perfect for quick questions or real-time availability.</p>
-                    <p class="contact-detail">+1 646 229 8158</p>
                     <a href="https://wa.me/16462298158?text=Hello!%20I%20have%20a%20question%20about%20Tocca%20Amalfi%20Coast." target="_blank" class="request-btn">Send a Message</a>
                 </div>
                 
                 <div class="request-option">
                     <i class="fas fa-comment"></i>
                     <h3>Text Message</h3>
-                    <p>Send a text message directly to Jessica for quick communication.</p>
-                    <p class="contact-detail">+1 646 229 8158</p>
                     <a href="sms:+16462298158?body=Hello!%20I%20have%20a%20question%20about%20Tocca%20Amalfi%20Coast." class="request-btn">Send a Text</a>
                 </div>
             </div>

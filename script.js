@@ -1,5 +1,35 @@
 document.addEventListener('DOMContentLoaded', function() {
 
+    // --- DOUBLE-CLICK LOGIC FOR "OUR EXPERIENCES" LINK ---
+    const experiencesLink = document.querySelector('a.nav-link[href="#our-experiences"]');
+    if (experiencesLink) {
+        let clickCount = 0;
+        let clickTimer = null;
+        
+        experiencesLink.addEventListener('click', function(e) {
+            clickCount++;
+            
+            if (clickCount === 1) {
+                // First click: prevent navigation, scroll to section
+                e.preventDefault();
+                clickTimer = setTimeout(() => {
+                    clickCount = 0;
+                }, 500); // Reset after 500ms
+                
+                const targetSection = document.querySelector('#our-experiences');
+                if (targetSection) {
+                    targetSection.scrollIntoView({ behavior: 'smooth' });
+                }
+            } else if (clickCount === 2) {
+                // Second click: navigate to /experiences
+                clearTimeout(clickTimer);
+                clickCount = 0;
+                e.preventDefault();
+                window.location.href = '/experiences';
+            }
+        });
+    }
+
     // --- LÓGICA PARA LA BARRA DE NAVEGACIÓN Y MENÚ HAMBURGUESA ---
     const hamburger = document.querySelector(".hamburger");
     const navMenu = document.querySelector(".nav-menu");

@@ -1,0 +1,629 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(to bottom, #e8f4f8 0%, #ffffff 50%);
+    min-height: 100vh;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 35vh;
+    min-height: 280px;
+    max-height: 350px;
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.hero-icon {
+    width: 48px;
+    height: 48px;
+    color: white;
+    margin-bottom: 8px;
+}
+
+.hero-icon svg {
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+}
+
+.hero-badge {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 6px 16px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.hero-title {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: 2.8rem;
+    font-weight: 400;
+    color: white;
+    text-align: center;
+    padding: 0 20px;
+    text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 0, 0, 0.5);
+    letter-spacing: 0.5px;
+    margin: 8px 0;
+}
+
+.hero-description {
+    font-size: 1.1rem;
+    color: white;
+    text-align: center;
+    max-width: 600px;
+    padding: 0 20px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    line-height: 1.5;
+}
+
+/* Days Grid Section */
+.days-grid {
+    max-width: 1300px;
+    margin: 0 auto 60px;
+    padding: 40px 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+/* Day Card - Horizontal layout */
+.day-card {
+    border-radius: 20px;
+    padding: 0;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    overflow: hidden;
+    min-height: 200px;
+}
+
+.day-card:hover {
+    transform: translateY(-3px);
+}
+
+/* Card Colors - All white */
+.day-card.cyan,
+.day-card.white,
+.day-card.yellow,
+.day-card.coral,
+.day-card.lightgreen,
+.day-card.purple {
+    background: #ffffff;
+    box-shadow: 0 6px 0 0 #d1d5db, 0 8px 16px rgba(0, 0, 0, 0.06);
+}
+
+/* Card Left - Text content */
+.card-left {
+    flex: 1;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Card Icon */
+.card-icon {
+    width: 32px;
+    height: 32px;
+    color: #374151;
+    margin-bottom: 12px;
+    opacity: 0.75;
+}
+
+.card-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.card-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 10px;
+    line-height: 1.3;
+}
+
+.card-description {
+    font-size: 0.8rem;
+    line-height: 1.45;
+    color: #4b5563;
+}
+
+/* Card Right - Image */
+.card-right {
+    position: relative;
+    width: 180px;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.card-right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 5px 12px;
+    border-radius: 14px;
+    font-size: 0.65rem;
+    color: #374151;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    z-index: 2;
+}
+
+.image-label {
+    position: absolute;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.95);
+    padding: 6px 14px;
+    border-radius: 16px;
+    font-size: 0.75rem;
+    color: #1f2937;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    z-index: 2;
+    white-space: nowrap;
+}
+
+/* Timeline View (Hidden on Desktop, Shown on Mobile) */
+.timeline-view {
+    display: none;
+    max-width: 700px;
+    margin: 60px auto;
+    padding: 0 20px;
+    position: relative;
+}
+
+.timeline-line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #d1d5db;
+    transform: translateX(-50%);
+    z-index: 0;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 60px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.timeline-item:nth-child(odd) {
+    justify-content: flex-end;
+    padding-right: calc(50% + 30px);
+}
+
+.timeline-item:nth-child(even) {
+    justify-content: flex-start;
+    padding-left: calc(50% + 30px);
+}
+
+.timeline-item:nth-child(even) .timeline-card {
+    margin-left: auto;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: 50%;
+    top: 20px;
+    transform: translateX(-50%);
+    width: 14px;
+    height: 14px;
+    background: white;
+    border: 3px solid #9ca3af;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.timeline-card {
+    border-radius: 20px;
+    padding: 24px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 280px;
+    width: 100%;
+}
+
+.card-icon-small {
+    width: 28px;
+    height: 28px;
+    color: #374151;
+    margin-bottom: 10px;
+    opacity: 0.8;
+}
+
+.card-icon-small svg {
+    width: 100%;
+    height: 100%;
+}
+
+.card-badge-small {
+    display: inline-block;
+    font-size: 0.7rem;
+    color: #6b7280;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    margin-bottom: 6px;
+    font-weight: 500;
+}
+
+.timeline-card h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 8px;
+    line-height: 1.3;
+}
+
+.timeline-card p {
+    font-size: 0.8rem;
+    line-height: 1.4;
+    color: #4b5563;
+}
+
+/* Farewell Section */
+.farewell {
+    position: relative;
+    width: 100%;
+    height: 45vh;
+    min-height: 380px;
+    max-height: 500px;
+    margin-top: 40px;
+    overflow: hidden;
+}
+
+.farewell-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.farewell-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.farewell-overlay h2 {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: white;
+    text-align: center;
+    margin-bottom: 14px;
+    text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 0, 0, 0.5);
+    letter-spacing: 0.5px;
+}
+
+.farewell-overlay p {
+    font-size: 1.1rem;
+    color: white;
+    text-align: center;
+    max-width: 650px;
+    margin-bottom: 28px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8), 0 0 15px rgba(0, 0, 0, 0.5);
+    line-height: 1.5;
+}
+
+/* Book Button */
+.book-btn {
+    background: #ff8c69;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 14px 45px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(255, 140, 105, 0.4);
+    text-transform: capitalize;
+    letter-spacing: 0.3px;
+}
+
+.book-btn:hover {
+    background: #ff7554;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(255, 117, 84, 0.5);
+}
+
+.book-btn:active {
+    transform: translateY(0);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1100px) {
+    .days-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        padding: 30px 20px;
+    }
+
+    .card-right {
+        width: 160px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .hero-title {
+        font-size: 2.2rem;
+    }
+
+    .farewell-overlay h2 {
+        font-size: 2rem;
+    }
+
+    .farewell-overlay p {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    /* Hide grid view, show timeline view on mobile */
+    .days-grid {
+        display: none;
+    }
+
+    .timeline-view {
+        display: block;
+    }
+
+    .hero {
+        height: 30vh;
+        min-height: 240px;
+    }
+
+    .hero-title {
+        font-size: 1.6rem;
+    }
+
+    .timeline-line {
+        left: 30px;
+    }
+
+    .timeline-item:nth-child(odd),
+    .timeline-item:nth-child(even) {
+        justify-content: flex-start;
+        padding-left: 60px;
+        padding-right: 20px;
+    }
+
+    .timeline-item:nth-child(even) .timeline-card {
+        margin-left: 0;
+    }
+
+    .timeline-dot {
+        left: 30px;
+    }
+
+    .timeline-card {
+        max-width: 100%;
+    }
+
+    .farewell {
+        height: 35vh;
+        min-height: 300px;
+    }
+
+    .farewell-overlay h2 {
+        font-size: 1.6rem;
+    }
+
+    .farewell-overlay p {
+        font-size: 0.9rem;
+    }
+
+    .book-btn {
+        padding: 12px 35px;
+        font-size: 0.95rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero-title {
+        font-size: 1.3rem;
+    }
+
+    .timeline-view {
+        padding: 0 15px;
+    }
+
+    .timeline-card {
+        padding: 20px;
+    }
+
+    .farewell-overlay h2 {
+        font-size: 1.4rem;
+    }
+
+    .farewell-overlay p {
+        font-size: 0.85rem;
+    }
+}
+
+/* Journey Contact Section */
+.journey-contact-section {
+    background: linear-gradient(135deg, #f9f9f9 0%, #ffffff 100%);
+    padding: 80px 20px;
+    text-align: center;
+    position: relative;
+}
+
+.journey-contact-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent 0%, rgba(74, 154, 146, 0.3) 50%, transparent 100%);
+}
+
+.journey-contact-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.journey-contact-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: #3a3a3a;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.journey-contact-section p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    color: #5a5a5a;
+    margin-bottom: 40px;
+    line-height: 1.8;
+}
+
+.journey-contact-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, #4A9A92, #3a7a72);
+    color: white;
+    padding: 18px 50px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(74, 154, 146, 0.3);
+    margin-bottom: 30px;
+}
+
+.journey-contact-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(74, 154, 146, 0.4);
+    background: linear-gradient(135deg, #3a7a72, #2a5a52);
+}
+
+.journey-contact-button i {
+    font-size: 1.3rem;
+}
+
+.journey-back-link {
+    margin-top: 30px;
+}
+
+.journey-back-link a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #4A9A92;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    border-bottom: 2px solid #4A9A92;
+    padding-bottom: 3px;
+    transition: all 0.3s ease;
+}
+
+.journey-back-link a:hover {
+    color: #3a7a72;
+    border-bottom-color: #3a7a72;
+    transform: translateX(-3px);
+}
+
+.journey-back-link i {
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .journey-contact-section h2 {
+        font-size: 2rem;
+    }
+
+    .journey-contact-section p {
+        font-size: 1rem;
+    }
+
+    .journey-contact-button {
+        padding: 14px 35px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .journey-contact-section {
+        padding: 60px 20px;
+    }
+
+    .journey-contact-section h2 {
+        font-size: 1.6rem;
+    }
+
+    .journey-contact-section p {
+        font-size: 0.95rem;
+    }
+
+    .journey-contact-button {
+        padding: 12px 30px;
+        font-size: 0.95rem;
+    }
+}

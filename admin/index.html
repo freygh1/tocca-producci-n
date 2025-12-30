@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tocca Admin - Editor de Página</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <!-- Barra superior -->
+    <header class="admin-header">
+        <div class="header-left">
+            <h1>Tocca Admin</h1>
+            <span class="header-subtitle">Editor Visual</span>
+        </div>
+        <div class="header-actions">
+            <button class="btn-secondary" id="btn-load-page">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+                    <polyline points="14 2 14 8 20 8"/>
+                </svg>
+                Cargar Página
+            </button>
+            <button class="btn-secondary" id="btn-export">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
+                    <polyline points="7 10 12 15 17 10"/>
+                    <line x1="12" y1="15" x2="12" y2="3"/>
+                </svg>
+                Exportar
+            </button>
+            <button class="btn-secondary" id="btn-preview">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                    <circle cx="12" cy="12" r="3"/>
+                </svg>
+                Vista Previa
+            </button>
+            <button class="btn-primary" id="btn-save">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 21H5a2 2 0 01-2-2V5a2 2 0 012-2h11l5 5v11a2 2 0 01-2 2z"/>
+                    <polyline points="17 21 17 13 7 13 7 21"/>
+                    <polyline points="7 3 7 8 15 8"/>
+                </svg>
+                Guardar Cambios
+            </button>
+        </div>
+    </header>
+
+    <div class="admin-container">
+        <!-- Panel Izquierdo: Bloques disponibles -->
+        <aside class="sidebar sidebar-left">
+            <div class="sidebar-header">
+                <h2>Bloques</h2>
+                <p class="sidebar-description">Arrastra bloques al canvas</p>
+            </div>
+            
+            <div class="blocks-list">
+                <div class="block-item" draggable="true" data-block-type="text">
+                    <div class="block-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="4 7 4 4 20 4 20 7"/>
+                            <line x1="9" y1="20" x2="15" y2="20"/>
+                            <line x1="12" y1="4" x2="12" y2="20"/>
+                        </svg>
+                    </div>
+                    <div class="block-info">
+                        <span class="block-name">Texto</span>
+                        <span class="block-desc">Párrafo o título</span>
+                    </div>
+                </div>
+
+                <div class="block-item" draggable="true" data-block-type="image">
+                    <div class="block-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                            <circle cx="8.5" cy="8.5" r="1.5"/>
+                            <polyline points="21 15 16 10 5 21"/>
+                        </svg>
+                    </div>
+                    <div class="block-info">
+                        <span class="block-name">Imagen</span>
+                        <span class="block-desc">Foto o gráfico</span>
+                    </div>
+                </div>
+
+                <div class="block-item" draggable="true" data-block-type="button">
+                    <div class="block-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="8" width="18" height="8" rx="2"/>
+                        </svg>
+                    </div>
+                    <div class="block-info">
+                        <span class="block-name">Botón</span>
+                        <span class="block-desc">Llamado a la acción</span>
+                    </div>
+                </div>
+
+                <div class="block-item" draggable="true" data-block-type="section">
+                    <div class="block-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2"/>
+                            <line x1="3" y1="9" x2="21" y2="9"/>
+                        </svg>
+                    </div>
+                    <div class="block-info">
+                        <span class="block-name">Sección</span>
+                        <span class="block-desc">Contenedor</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Área Central: Canvas -->
+        <main class="canvas-area">
+            <div class="canvas-toolbar">
+                <button class="toolbar-btn" id="btn-undo" title="Deshacer">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M3 7v6h6"/>
+                        <path d="M21 17a9 9 0 00-9-9 9 9 0 00-6 2.3L3 13"/>
+                    </svg>
+                </button>
+                <button class="toolbar-btn" id="btn-redo" title="Rehacer">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 7v6h-6"/>
+                        <path d="M3 17a9 9 0 019-9 9 9 0 016 2.3l3 2.7"/>
+                    </svg>
+                </button>
+                <div class="toolbar-divider"></div>
+                <button class="toolbar-btn" id="btn-clear-all" title="Limpiar todo">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="3 6 5 6 21 6"/>
+                        <path d="M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2"/>
+                    </svg>
+                </button>
+            </div>
+            
+            <div class="canvas" id="canvas">
+                <div class="canvas-placeholder">
+                    <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <rect x="3" y="3" width="18" height="18" rx="2"/>
+                        <line x1="12" y1="8" x2="12" y2="16"/>
+                        <line x1="8" y1="12" x2="16" y2="12"/>
+                    </svg>
+                    <p>Arrastra bloques aquí para comenzar</p>
+                </div>
+            </div>
+        </main>
+
+        <!-- Panel Derecho: Propiedades -->
+        <aside class="sidebar sidebar-right">
+            <div class="sidebar-header">
+                <h2>Propiedades</h2>
+                <p class="sidebar-description" id="properties-subtitle">Selecciona un bloque</p>
+            </div>
+            
+            <div class="properties-panel" id="properties-panel">
+                <div class="no-selection">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                        <path d="M2 17l10 5 10-5"/>
+                        <path d="M2 12l10 5 10-5"/>
+                    </svg>
+                    <p>Selecciona un bloque para editar sus propiedades</p>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Modal de Vista Previa -->
+    <div class="modal" id="preview-modal">
+        <div class="modal-backdrop"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Vista Previa</h2>
+                <button class="modal-close" id="modal-close">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"/>
+                        <line x1="6" y1="6" x2="18" y2="18"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="modal-body">
+                <iframe id="preview-frame" sandbox="allow-same-origin"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Selección de Páginas -->
+    <div class="modal" id="page-selector-modal">
+        <div class="modal-backdrop"></div>
+        <div class="modal-content" style="max-width: 700px; height: auto; max-height: 80vh;">
+            <div class="modal-header">
+                <div>
+                    <h2>Cargar Página Existente</h2>
+                    <p style="margin: 4px 0 0 0; font-size: 14px; color: #6b7280;">Selecciona una página de Tocca para editarla</p>
+                </div>
+                <button class="modal-close" id="page-modal-close">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"/>
+                        <line x1="6" y1="6" x2="18" y2="18"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="modal-body" style="padding: 24px; overflow-y: auto;">
+                <div id="page-list"></div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="parser.js"></script>
+    <script type="module" src="storage.js"></script>
+    <script type="module" src="renderer.js"></script>
+    <script type="module" src="editor.js"></script>
+</body>
+</html>
